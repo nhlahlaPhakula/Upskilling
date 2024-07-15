@@ -1,0 +1,299 @@
+<html>
+    <meta name="viewport" content="width=device-width, user-scalable=no" />
+    <head>
+        <title>Profile Template</title>
+        <link rel="stylesheet" href="../Styles/style.css">
+        <link rel="icon" type="image/x-icon" href="../Media/movie-logo.png">
+    </head>
+    <header class="header">
+        <div class="header-comp" onclick="humburgerMenu(this)">
+            <div class="humburgerStyleMenu" >
+                <div class="firstDivBar"></div>
+                <div class="secDivBar"></div>
+                <div class="thirdDivBar"></div>
+            </div>
+            <div class="spacer"></div>
+            <div class="humburgerStyleMenu-cont" >
+                <div class="HomeLink"><a href="../Templates/HomepageTemplate.html">Home</a></div>
+                <div class="moviesLink"><a href="../Templates/Latest-Movies.html">Movies</a></div>
+                <div class="aboutUsLink"><a href="../Templates/AboutUsTemplate.html">About Us</a></div>
+                <div class="profileLink"><a href="../Templates/ProfileTemplate.html">Profile</a></div>
+                <div class="faqLink"><a href="../Templates/FAQ.html">FAQ</a></div>
+                <div class="newsroom"><a href="../Templates/Newsroom.html">Newsroom</a></div>
+            </div>
+        </div>
+        <div class="header-text">
+            <h1 id="header">Movies</h1>
+        </div>
+        <div class="loginLogout" onclick="displayProfile(this)">
+            <div class="userIcon"><img src="../Media/personIcon.png" alt="userIcon"></div>
+            <div class="userIconDetails">
+                <div class="userIconDetailsDiv1"><a href="">Sign In</a></div>
+                <div class="userIconDetailsDiv2"><a href="">Sign Up</a></div>
+            </div>
+        </div>
+        
+    </header>
+    <div class="spacer"></div>
+
+    <body class="newsroom" onscroll="moveColor()">
+
+        <div class="spacer"></div>
+
+        <div class="latestNewsFirstDiv">
+            <div class="latestNewsFirstDiv-heading"><h2>Latest News</h2></div>
+            <div class="latestNewsFirstDiv-cont">
+                <div class="latestNewsFirstDiv-cont-div">
+                    <span id="dailyUpdates">Daily Updates</span>
+                    <h1>Movies.com became the number one <br/>streaming service in over 2 years.</h1>
+                    <span id="date">June 26, 2024</span>
+                </div>
+                
+            </div>
+        </div>
+        <div class="spacer"></div>
+        <div class="latestNewsCards">
+            <div class="latestNewsCards-firstRow">
+                <div class="latestNewsCards-first">
+                    <div class="latestCardImage-first"></div>
+                    <div class="latestNewsCardCont">
+                        <label>Quick Read</label>
+                        <h3>New versions of Final Cut Pro for iPad and Mac available today</h3>
+                        <div class="latestDateAndBtnDiv">
+                            <div class="latestDate"><label>June 20, 2024</label></div>
+                            <div class="latestBtn"><button>&#65291;</button></div>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="latestNewsCards-second">
+                    <div class="latestCardImage-second"></div>
+                    <div class="latestNewsCardCont">
+                        <label>Latest</label>
+                        <h3>Apple Arcade launches two hit games on Apple Vision Pro</h3>
+                        
+                        <div class="latestDateAndBtnDiv">
+                            <div class="latestDate"><label>June 20, 2024</label></div>
+                            <div class="latestBtn"><button>&#65291;</button></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="latestNewsCards-secondRow">
+                <div class="latestNewsCards-third">
+                    <div class="latestCardImage-third"></div>
+                    <div class="latestNewsCardCont">
+                        <label>Press Release</label>
+                        <h3>Apple The Exchange TRX opens Saturday, June 22, in Kuala Lumpur</h3>
+                        
+                        <div class="latestDateAndBtnDiv">
+                            <div class="latestDate"><label>June 19, 2024</label></div>
+                            <div class="latestBtn"><button class="latestBtn-btn" >&#65291;</button></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="latestNewsCards-fourth">
+                    <div class="latestCardImage-fourth"></div>
+                    <div class="latestNewsCardCont">
+                        <label>Quick Read</label>
+                        <h3>Apple Developer Academy introduces AI training for all students and alumni</h3>
+                        
+                        <div class="latestDateAndBtnDiv">
+                            <div class="latestDate"><label>June 18, 2024</label></div>
+                            <div class="latestBtn">
+                                <button>&#65291;</button>
+                                <!--This is where the popup article goes-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="spacer"></div>
+            <!--We are creating a popup element-->
+            <div >
+                <div class="popUp" >
+                    <h3 onclick="overlayOn()">hey</h3>
+                    <div class="popupContent" id="overlayContainer" >
+                        <div class="popupCloseImg">
+                            <img src="../Media/close.png" alt="closeImg" onclick="overlayOff()">
+                        </div>
+                        <div class="popupImage">
+                            <img src="../Media/Apple-Developer-app.jpg.square_social.jpg" alt="Apple-Developer-Academy">
+                        </div>
+                               
+                        <div class="popupContentLabelDate">
+                            <div class="popupLbl">Quick Read</div>
+                            <div class="popupDot">.</div>
+                            <div class="popupDate">June 18, 2024</div>
+                        </div> 
+                        <div class="popupHeading">
+                            <h1>Apple Developer Academy introduces AI training for all students and alumni</h1>
+                        </div>     
+                        <div class="popupSubHeading" id="popupSubHeading">
+                            <h3>New core curriculum will benefit Apple Developer Academy students and alumni in Brazil, Indonesia, Italy, Saudi Arabia, South Korea, and the United States starting this fall</h3>
+                        </div>
+                        <div class="popupSocials">
+                            <div class="popupSocial1">
+                                <a href="https://www.facebook.com/"><img src="../Media/facebook_icon.svg" alt="facebook"></a>
+                            </div>
+                            <div class="popupSocial2">
+                                <a href="https://www.twitter.com/"><img src="../Media/twitter_icon.svg" alt="twitter/x"></a>
+                            </div>
+                            <div class="popupSocial3">
+                                <a href="https://www.instagram.com/"><img src="../Media/instagram_icon.svg" alt="instagram"></a>
+                            </div>
+                            <div class="popupSocial4">
+                                <a href="https://www.linkedin.com/"><img src="../Media/linkedin_icon.svg" alt="linkedIn"></a>
+                            </div>
+                        </div>  
+                              <div class="popupArticleBody">
+                                <span>Today Apple announced it will train all Apple Developer Academy students and mentors on technologies and tools that take advantage of artificial intelligence (AI). Apple Developer Academy alumni will also have the opportunity to take part in this training. The new core curriculum will be provided to thousands of students and alumni across 18 Developer Academies in six countries as the academy continues to increase opportunities for developers, designers, and entrepreneurs looking to embark on careers in the growing iOS app economy and beyond.</span>
+                                <br>
+                                <span>Dedicated curriculum on AI joins the academy’s program as a foundational skill, extending essential competencies in coding, professional skills, design, and marketing that are offered across the world and aim to help students learn important skills to contribute to their local businesses and communities. Apple Developer Academy curriculum also incorporates Apple’s values throughout coursework, encouraging students to design inclusively and make a positive impact in the world.</span>
+                                <br>
+                                <span>“At Apple, we see coding as a universal language and believe in empowering developers, creators, and entrepreneurs across the world with tools and technologies that will allow them to create phenomenal experiences,” said Susan Prescott, Apple’s vice president of Worldwide Developer Relations. “With the introduction of curriculum dedicated to AI and other new technologies, we’re excited to see what students will build to share with their communities and the world.”</span>
+                                <br>
+                                <span>Beginning this fall, every Apple Developer Academy student will benefit from custom-built curriculum that teaches them how to build, train, and deploy machine learning models across Apple devices. Courses will include the fundamentals of AI technologies and frameworks; Core ML and its ability to deliver fast performance on Apple devices; and guidance on how to build and train AI models from the ground up. Students will learn from guided curriculum and project-based assignments that include assistance from hundreds of mentors and more than 12,000 academy alumni worldwide.</span>
+                                <br>
+                                <span>With the introduction of new Apple technologies and APIs announced at WWDC24, students will also have even more access to tools that empower them to build exceptional projects and apps. This includes Xcode 16, which sets a new standard for developer productivity. These features and performance enhancements also include Swift Assist, which serves as a companion for all of a developer’s coding tasks, and easily allows students to explore new frameworks and experiment with new ideas. Additionally, Swift 6 introduces new capabilities aimed at enhancing code clarity and making concurrent programming easier.</span>
+                                <br>
+                                <span>Apple is part of every stage of the student journey, whether it’s exploring the fundamentals of app development in Apple’s global Foundations program, improving their skills at Apple Developer Academies, or taking their apps to the next level.</span>
+                            </div>
+        
+                        <div class="popupDropdown" onclick="articleAccordion(this)">
+                            <div class="popupDropdownHeading">
+                                <div class="popupContact"><h4>Press Contacts</h4></div>
+                                <div class="popupDropIcon"><img src="../Media/dropdown.png" alt="dropdown-arrow"></div>
+                                <div class="popupDropIcon2"><img src="../Media/UpArrow.png" alt="UpArrow"></div>
+                            </div>
+                            <div class="popupDropdownDivider"><hr></div>
+                            <div class="popupDropdownDetails">
+                                <div class="contactPerson1">
+                                    <h3>D'Nara Cush</h3>
+                                    <label>Apple</label>
+                                    <a href="mailto: d_cush@apple.com">d_cush@apple.com</a>
+                                </div>
+                                <div class="contactPerson2">
+                                    <h3>Apple Media Helpline</h3>
+                                    <a href="mailto: media.help@apple.com">media.help@apple.com</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            
+            
+        </div>
+
+
+
+
+
+
+
+
+
+
+        <div class="spacer"></div>
+        <!--Scroll progress bar-->
+        <div class="scrollProgressBar" id="pgrBar"></div>
+
+        <!--JS Script for Hamburger style menu-->
+        <script>
+            function humburgerMenu(y) {
+                y.classList.toggle("colapseMenu");
+            }
+        </script>
+
+        <!--A JS script for the profile icon-->
+        <script>
+            function displayProfile (x) {
+                x.classList.toggle("colapseProfile");
+            }
+        </script>
+
+        <!--A JS SCRIPT FOR SCROLL PROGRESS BAR-->
+        <script>
+
+           // window.onscroll = function() {moveColor()};
+
+            var viewportHeight = window.innerHeight;
+
+            //var scrollHeight = viewportHeight * (viewportHeight / document.body.offsetHeight);
+
+
+            function moveColor () {
+               
+
+              //Scroll progress bar
+
+              //First we get the scroller value
+              var windowScroll = document.body.scrollTop;
+              //We now find the height difference between the entire page and the viewport
+              var height = document.documentElement.scrollHeight - viewportHeight;
+              //Scroll percentage
+              var scrolledPercentage = (windowScroll / height) * 100;
+              //console.log('Scrolled Percentage: ' + scrolledPercentage + '%');
+
+              //set the width of the progress bar to the scrolled percentage
+              document.getElementById("pgrBar").style.width = scrolledPercentage + "%";
+              
+            }
+
+        </script>
+
+        <!--A JS FOR DROPDOWN FOR ARTICLE ACCORDION-->
+        <script>
+            function articleAccordion(x) {
+                x.classList.toggle("contactDetails");
+            }
+        </script>
+
+        <!--A JS SCRIPT FOR ARTICLE POPUP
+        <script>
+
+            function articlePopup(x) {
+                x.classList.toggle("displayArticle");
+            }
+
+            function articlePopupClose() {
+                document.getElementById("popUp").style.display = "none";
+            }
+        </script>-->
+
+        <!--Overlay functions for our popup-->
+        <script>
+            function overlayOn() {
+                document.getElementById("overlayContainer").style.display = "block";
+            }
+
+            function overlayOff() {
+                document.getElementById("overlayContainer").style.display = "none";
+            }
+        </script>
+        
+    </body>
+    <!--Footer-->
+    <div class="spacer"></div>
+    <footer class="second-footer">
+        <div class="secondFooter-content">
+            <div class="secFooterBrand">
+                <h1>Movies</h1>
+            </div>
+            <div class="secFooterCopyRight">
+                <span>Movies © 2013 - 2024</span>
+            </div>
+            <div class="secFooterSocials">
+                <div><a href="https://www.facebook.com/"><img src="../Media/facebook_icon.svg" alt="fbIcon"></a></div>
+                <div><a href="https://www.instagram.com/"><img src="../Media/instagram_icon.svg" alt="instaIcon"></a></div>
+                <div><a href="https://za.pinterest.com/"><img src="../Media/pinterest_icon.svg" alt="pinterest_icon"></a></div>
+                <div><a href="https://za.pinterest.com/"><img src="../Media/twitter_icon.svg" alt="twitter_icon"></a></div>
+                <div><a href="https://www.youtube.com/"><img src="../Media/youtube_icon.svg" alt="youtube_icon"></a></div>
+                <div><a href="https://www.linkedin.com/"><img src="../Media/linkedin_icon.svg" alt="linkedin_icon"></a></div>
+            </div>
+        </div>
+    </footer>
+</html>

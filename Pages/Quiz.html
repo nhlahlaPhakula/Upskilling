@@ -1,0 +1,227 @@
+<html>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <head>
+        <title>Quiz</title>
+        <link rel="stylesheet" href="../Styles/style.css" />
+    </head>
+    <header>
+        <h1 class="header-text" id="header">Movies</h1>
+    </header>
+    <body>
+        <div class="spacer"></div>
+        <div class="contentBody">
+            <div class="quiz-header">
+                <h2>Let's Help You Pick A Movie To Watch</h2>
+            </div>
+            <div class="quizHeading">
+                <h2>Movie Quiz</h2>
+            </div>
+            <div class="quizBody">
+                <div class="quizSection">
+                    <span>
+                        <input type="radio" name="quizSection" />
+                        <label>Content Type</label>
+                    </span>
+                    <span>
+                        <input type="radio" name="quizSection" onclick="displayFunction(this)">
+                        <label>Genre</label>
+                    </span>
+                    <span>
+                        <input type="radio" name="quizSection">
+                        <label>Year</label>
+                    </span>
+                    <span>
+                        <input type="radio" name="quizSection">
+                        <label>Country</label>
+                    </span>
+                    <span>
+                        <input type="radio" name="quizSection">
+                        <label>Run-time</label>
+                    </span>
+                </div>
+                <div class="quizContentArea" id="quizContentArea">
+                    <!--Genre-->
+                    <div class="genreTile">
+                        <div class="genreTileHeading">
+                            <h3>Genre</h3>
+                        </div>
+                        
+                        <div class="genres">
+                            <div class="genreFirstRow">
+                                <div>
+                                    <img src="../Media/zelda.jpg" />
+                                    <p>Animation</p>
+                                    <input type="radio" name="genre"/>
+                                </div>
+                                
+                                <div>
+                                    <img src="../Media/fiction.jpg" />
+                                    <p>Sci-Fi</p>
+                                    <input type="radio" name="genre"/>
+                                </div>
+                            </div>
+                            <div>&VerticalLine;</div>
+                            <div class="genreSecRow">
+                                <div>
+                                    <img src="../Media/comedy.jpg" />
+                                    <p>Comedy</p>
+                                    <input type="radio" name="genre"/>
+                                </div>
+                                <div>
+                                    <img src="../Media/action (1).jpg" />
+                                    <p>Action</p>
+                                    <input type="radio" name="genre"/>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        <div class="divBtn">
+                            <button class="nextBtn">Next</button>
+                            <div class="spacer"></div>
+                        </div>
+                        
+                    </div>
+
+                    <!--JS Script-->
+                    <script>
+                        function displayFunction(x) {
+                            x.classList.toggle("changePosition");
+                        }
+                    </script>
+
+                    <!--Content Type-->
+                    <div class="contentType">
+                        <div class="contentTypeHeading">
+                            <h3>Content Type</h3>
+                        </div>
+                        
+                        <div class="contentTypeContainer">
+                            <div class="movieContentType">
+                                <img src="../Media/movies.jpg"/>
+                                <p>Movies</p>
+                                <input type="radio" name="contentType">
+                            </div>
+                            <div class="tvShowContentType">
+                                <img src="../Media/show.jpg"/>
+                                <p>Tv Shows</p>
+                                <input type="radio" name="contentType"/>
+                            </div>
+                        </div>
+                        <div class="divBtn">
+                            <button class="nextBtn">Next</button>
+                            <div class="spacer"></div>
+                        </div>
+                    </div>
+                    <!--Run Time-->
+                    <div class="runTime">
+                        <div class="runtimeHeading">
+                            <h3>Run Time</h3>
+                        </div>
+                        
+                        <div class="runTimeContainer">
+                            <div class="runTimefirstColumn">
+                                <div>
+                                    <input type="radio" name="runTime" />
+                                    <p>30min-Hour</p>
+                                </div>
+                                <div>
+                                    <input type="radio" name="runTime"/>
+                                    <p>1 Hour-1h30min</p>
+                                </div>
+                            </div>
+                            
+                            <div class="runTimeSecColumn">
+                                <div>
+                                    <input type="radio" name="runTime"/>
+                                    <p>1h30min - 2 Hours</p>
+                                </div>
+                                <div>
+                                    <input type="radio" name="runTime" />
+                                    <p>2Hours - 3Hours</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="divBtn">
+                            <button class="nextBtn">Next</button>
+                            <div class="spacer"></div>
+                        </div>
+                    </div>
+                    <!--Year-->
+                    <div class="yearOfRelease">
+                        <div class="yearOfReleaseHeading">
+                            <h3>Year of Release</h3>
+                        </div>
+                        <div class="years">
+                            <div>
+                                <img src="../Media/1980s.jpg"/>
+                                <p>1980-1999</p>
+                                <input type="radio" name="yearOfRelease"/>
+                            </div>
+                            <div>
+                                <img src="../Media/2000s.jpg"/>
+                                <p>2000-2010</p>
+                                <input type="radio" name="yearOfRelease"/>
+                            </div>
+                            <div>
+                                <img src="../Media/2010s.jpg"/>
+                                <p>2011-2024</p>
+                                <input type="radio" name="yearOfRelease"/>
+                            </div>
+                        </div>
+                        <div class="divBtn">
+                            <button class="nextBtn">Next</button>
+                            <div class="spacer"></div>
+                        </div>
+                    </div>
+                    <!--Country-->
+                    <div class="country">
+                        <div class="countryHeading">
+                            <h3>Country-Continent</h3>
+                        </div>
+                        
+                        <div class="countries">
+                            <div class="countryFirstRow">
+                                <div>
+                                    <img src="../Media/japan.jpg" alt="">
+                                    <p>Japan</p>
+                                    <input type="radio" name="countries"/>
+                                </div>
+                                <div>
+                                    <img src="../Media/korea.jpg" alt="">
+                                    <p>Korea</p>
+                                    <input type="radio" name="countries"/>
+                                </div>
+                            </div>
+                            <div class="countrySecondRow">
+                                <div>
+                                    <img src="../Media/africa.jpg" alt="">
+                                    <p>Africa</p>
+                                    <input type="radio" name="countries"/>
+                                </div>
+                            </div>
+                            <div class="contryThirdRow">
+                                <div>
+                                    <img src="../Media/hollywood.jpg" alt="">
+                                    <p>USA</p>
+                                    <input type="radio" name="countries"/>
+                                </div>
+                                <div>
+                                    <img src="../Media/europe.jpg" alt="">
+                                    <p>Europe</p>
+                                    <input type="radio" name="countries"/>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div class="divBtn">
+                            <button class="submitBtn">Submit</button>
+                            <div class="spacer"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </body>
+    
+</html>

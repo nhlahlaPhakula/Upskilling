@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="19.057" viewBox="0 0 20 19.057">
+  <defs>
+    <clipPath id="clip-path">
+      <path id="Mask" d="M11.2,19.057H6.912c0-.1.057-11.659,0-12.857H11.2V8.021l-.01.015-.018.026H11.2V8.021A4.237,4.237,0,0,1,15.064,5.9,4.647,4.647,0,0,1,18.59,7.308,6.241,6.241,0,0,1,20,11.683v7.372H15.713V12.177c0-1.327-.377-2.908-2.172-2.908a2.344,2.344,0,0,0-2.2,1.564,2.815,2.815,0,0,0-.142,1.042v7.18Zm-6.659,0H.255V6.2H4.541V19.055ZM2.4,4.444H2.37A2.229,2.229,0,1,1,2.426,0,2.23,2.23,0,1,1,2.4,4.444Z" transform="translate(2 2.4)" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="linkedin_icon" transform="translate(-2 -2.4)">
+    <path id="Mask-2" data-name="Mask" d="M11.2,19.057H6.912c0-.1.057-11.659,0-12.857H11.2V8.021l-.01.015-.018.026H11.2V8.021A4.237,4.237,0,0,1,15.064,5.9,4.647,4.647,0,0,1,18.59,7.308,6.241,6.241,0,0,1,20,11.683v7.372H15.713V12.177c0-1.327-.377-2.908-2.172-2.908a2.344,2.344,0,0,0-2.2,1.564,2.815,2.815,0,0,0-.142,1.042v7.18Zm-6.659,0H.255V6.2H4.541V19.055ZM2.4,4.444H2.37A2.229,2.229,0,1,1,2.426,0,2.23,2.23,0,1,1,2.4,4.444Z" transform="translate(2 2.4)" fill="none"/>
+    <g id="Mask_Group_29" data-name="Mask Group 29" clip-path="url(#clip-path)">
+      <g id="Colors_Primary_Dark" data-name="Colors/Primary/Dark">
+        <rect id="Rectangle_7_Copy_33" data-name="Rectangle 7 Copy 33" width="24" height="24" fill="#252e48"/>
+      </g>
+    </g>
+  </g>
+</svg>

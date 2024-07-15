@@ -1,0 +1,263 @@
+<html>
+    <meta name="viewport" content="width=device-width, user-scalable=no" />
+    <head>
+        <title>Homepage Template</title>
+        <link rel="stylesheet" href="../Styles/style.css">
+        <link rel="icon" type="image/x-icon" href="../Media/movie-logo.png">
+    </head>
+    <header class="header">
+        <div class="header-comp" onclick="humburgerMenu(this)">
+            <div class="humburgerStyleMenu" >
+                <div class="firstDivBar"></div>
+                <div class="secDivBar"></div>
+                <div class="thirdDivBar"></div>
+            </div>
+            <div class="spacer"></div>
+            <div class="humburgerStyleMenu-cont" >
+                <div class="HomeLink"><a href="../Templates/HomepageTemplate.html">Home</a></div>
+                <div class="moviesLink"><a href="../Templates/Latest-Movies.html">Movies</a></div>
+                <div class="aboutUsLink"><a href="../Templates/AboutUsTemplate.html">About Us</a></div>
+                <div class="profileLink"><a href="../Templates/ProfileTemplate.html">Profile</a></div>
+                <div class="faqLink"><a href="../Templates/FAQ.html">FAQ</a></div>
+                <div class="newsroom"><a href="../Templates/Newsroom.html">Newsroom</a></div>
+            </div>
+        </div>
+        <div class="header-text">
+            <h1 id="header">Movies</h1>
+        </div>
+        <div class="loginLogout">
+            <div class="userIcon"><img src="../Media/personIcon.png" alt="userIcon"></div>
+            <div class="userIconDetails">
+                <div class="userIconDetailsDiv1"><a href="">Sign In</a></div>
+                <div class="userIconDetailsDiv2"><a href="">Sign Up</a></div>
+            </div>
+        </div>
+        
+    </header>
+    <div class="spacer"></div>
+    <body class="hpgBody" onscroll="moveColor()">
+        <!--Slider for desktop-->
+        <div class="homepageSliderContainer" >
+            <div class="homepageSlide1" id="slide">
+                <img class="homepageSldImg" src="../Media/cosmo.jpg" alt="image1">
+                <img class="homepageSldMobImg" src="../Media/Nebula.jpg" alt="mobImage1">
+                <h1>This is a heading</h1>
+                <p>This is a paragraph</p>
+                <button>Click Here</button>
+            </div>
+            <div class="homepageSlide2" id="slide">
+                <img class="homepageSldImg" src="../Media/techBanner.jpg" alt="image2">
+                <img class="homepageSldMobImg" src="../Media/planet.jpeg" alt="mobImage2">
+                <h1>This is a heading</h1>
+                <p>This is a paragraph</p>
+                <button>Click Here</button>
+            </div>
+            <div class="homepageSlide3" id="slide">
+                <img class="homepageSldImg" src="../Media/scifiBanner.jpg" alt="image3">
+                <img class="homepageSldMobImg" src="../Media/Avatar.jpg" alt="mobImage3">
+                <h1>This is a heading</h1>
+                <p>This is a paragraph</p>
+                <button>Click Here</button>
+            </div>
+            <div class="bannerPagination" id="slide" >
+                <div class="slidePrvBtn"><button onclick="reductionFunction()"></button></div>
+                <div><button></button></div>
+                <div class="slideNextBtn"><button id="slide-nextBtn" onclick="conterFunction()"></button></div>
+            </div>
+        </div>
+        <div class="spacer"></div>
+        <!--Call to action section-->
+        <div class="callToAction">
+            <h2>A world of Adventures!</h2>
+            <button>Explore</button>
+        </div>
+
+        <div class="spacer"></div>
+
+        <!--3 Column component-->
+        <div class="three-col-comp">
+            <div class="three-comp-col1">
+                <div class="comp-col-cont">
+                    <div class="col-movie-img">
+                        <img src="../Media/Eternals.jpg" alt="first Column image">
+                    </div>
+                    <div class="col-movie-details">
+                        <h3>Eternals</h3>
+                        <h5>Time: 157m</5>
+                        <h5>Studio: Marvel Studios Entertainment</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="breakPoint"></div>
+            <div class="three-comp-col2">
+                <div class="comp-col-cont">
+                    <div class="col-movie-img">
+                        <img src="../Media/Batman.jpg" alt="second column image">
+                    </div>
+                    <div class="col-movie-details">
+                        <h3>The Batman</h3>
+                        <h5>Time: 175m</h5>
+                        <h5>Studio: Warner Bros Entertainment</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="breakPoint"></div>
+            <div class="three-comp-col3">
+                <div class="comp-col-cont">
+                    <div class="col-movie-img">
+                        <img src="../Media/Avatar2.jpg" alt="third column image">
+                    </div>
+                    <div class="col-movie-details">
+                        <h3>Avatar</h3>
+                        <h5>Time: 192m</h5>
+                        <h5>Studio: 20th Century Studios</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="breakPoint"></div>
+        </div>
+
+        <div class="spacer"></div>
+        <!--Text Area-->
+        <div class="textAreaComp">
+            <div class="textAreaCompCont">
+                <div class="leftColmn">
+                    <div class="leftClmnHeading">
+                        <div class="iconArea">
+                            <img src="../Media/history.jpg" alt="Movie history">
+                        </div>
+                        <div class="txtArea">
+                            <h2>Movie Fun Facts</h2>
+                        </div>
+                    </div>
+                    <h2 class="txtAreaBdy">This is a text area that is used <br>for testing purposes!</h2>
+                    <a href="https://www.independent.co.uk/arts-entertainment/films/features/movie-facts-fun-trivia-b1877408.html">www.knowmore.com</a>
+                </div>
+                <div class="rightColmn"></div>
+            </div>
+            <div class="textAreaCompBtmTxt">
+                <h3>I encourage everyone to #Be safe and <span class="secondPart">#keep learning</span></h3>
+            </div>
+        </div>
+        <!--Scroll progress bar-->
+        <div class="scrollProgressBar" id="pgrBar"></div>
+        <!--JS Script for Hamburger style menu-->
+        <script>
+            function humburgerMenu(y) {
+                y.classList.toggle("colapseMenu");
+            }
+        </script>
+
+        <!--Pagination javacript-->
+        <!--<script>
+            function displaySlide(x) {
+                x.classList.toggle("viewSlide");
+            }
+            
+        </script>-->
+
+
+        <!-- A CARD SLIDER JS-->
+
+        <script>
+            var counter = 0;
+
+            var firstSlide = 1;
+            var secSlide = -1;
+
+            //first we need to check user interaction, click button ans return a message
+            function conterFunction() {
+                var sum = counter + 1;
+               // alert("Total =" + sum);
+
+                //display content with "sum" ID
+                //document.getElementById(sum).style.display = "block";
+
+                /*if(sum  == firstSlide) {
+                    console.log("Show first slide") 
+                    document.getElementById("firstSld").style.display = "block";
+                }else {
+                    //console.log("Show second slide")
+                    document.getElementById("secSld").style.display = "block";
+                }*/
+
+                //lets find how many items use the following ID "slide"
+
+                let result = document.getElementById("slide");
+
+                //console.log(result);
+
+                for (i = 0; i <= result.length; i++) {
+                    console.log("Results: " + i)
+                }
+               
+
+            }
+
+
+            //function to minus
+            function reductionFunction() {
+                var sum = counter - 1;
+                //alert("Total =" + sum);
+
+                if(sum == secSlide) {
+                    //console.log("Show previous slide")
+                    document.getElementById("secSld").style.display = "block";
+                }else {
+                    //console.log("Show first slide")
+                    document.getElementById("firstSld").style.display = "block";
+                }
+    
+            }
+
+        </script>
+
+        <!--A JS SCRIPT FOR SCROLL PROGRESS BAR-->
+        <script>
+
+            // window.onscroll = function() {moveColor()};
+ 
+             var viewportHeight = window.innerHeight;
+ 
+             //var scrollHeight = viewportHeight * (viewportHeight / document.body.offsetHeight);
+ 
+ 
+             function moveColor () {
+                
+ 
+               //Scroll progress bar
+ 
+               //First we get the scroller value
+               var windowScroll = document.body.scrollTop;
+               //We now find the height difference between the entire page and the viewport
+               var height = document.documentElement.scrollHeight - viewportHeight;
+               //Scroll percentage
+               var scrolledPercentage = (windowScroll / height) * 100;
+               //console.log('Scrolled Percentage: ' + scrolledPercentage + '%');
+               document.getElementById("pgrBar").style.width = scrolledPercentage + "%";
+               
+             }
+ 
+         </script>
+        
+    </body>
+    <div class="spacer"></div>
+    <footer class="second-footer">
+        <div class="secondFooter-content">
+            <div class="secFooterBrand">
+                <h1>Movies</h1>
+            </div>
+            <div class="secFooterCopyRight">
+                <span>Movies © 2013 - 2024</span>
+            </div>
+            <div class="secFooterSocials">
+                <div><a href="https://www.facebook.com/"><img src="../Media/facebook_icon.svg" alt="fbIcon"></a></div>
+                <div><a href="https://www.instagram.com/"><img src="../Media/instagram_icon.svg" alt="instaIcon"></a></div>
+                <div><a href="https://za.pinterest.com/"><img src="../Media/pinterest_icon.svg" alt="pinterest_icon"></a></div>
+                <div><a href="https://za.pinterest.com/"><img src="../Media/twitter_icon.svg" alt="twitter_icon"></a></div>
+                <div><a href="https://www.youtube.com/"><img src="../Media/youtube_icon.svg" alt="youtube_icon"></a></div>
+                <div><a href="https://www.linkedin.com/"><img src="../Media/linkedin_icon.svg" alt="linkedin_icon"></a></div>
+            </div>
+        </div>
+    </footer>
+</html>

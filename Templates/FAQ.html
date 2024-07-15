@@ -1,0 +1,275 @@
+<html>
+    <meta name="viewport" content="width=device-width, user-scalable=no" />
+    <head>
+        <title>Profile Template</title>
+        <link rel="stylesheet" href="../Styles/style.css">
+        <link rel="icon" type="image/x-icon" href="../Media/movie-logo.png">
+    </head>
+    <header class="header">
+        <div class="header-comp" onclick="humburgerMenu(this)">
+            <div class="humburgerStyleMenu" >
+                <div class="firstDivBar"></div>
+                <div class="secDivBar"></div>
+                <div class="thirdDivBar"></div>
+            </div>
+            <div class="spacer"></div>
+            <div class="humburgerStyleMenu-cont" >
+                <div class="HomeLink"><a href="../Templates/HomepageTemplate.html">Home</a></div>
+                <div class="moviesLink"><a href="../Pages/Latest-Movies.html">Movies</a></div>
+                <div class="aboutUsLink"><a href="../Templates/AboutUsTemplate.html">About Us</a></div>
+                <div class="profileLink"><a href="../Templates/ProfileTemplate.html">Profile</a></div>
+                <div class="faqLink"><a href="../Templates/FAQ.html">FAQ</a></div>
+                <div class="newsroom"><a href="../Templates/Newsroom.html">Newsroom</a></div>
+            </div>
+        </div>
+        <div class="header-text">
+            <h1 id="header">Movies</h1>
+        </div>
+        <div class="loginLogout" onclick="displayProfile(this)">
+            <div class="userIcon"><img src="../Media/personIcon.png" alt="userIcon"></div>
+            <div class="userIconDetails">
+                <div class="userIconDetailsDiv1"><a href="">Sign In</a></div>
+                <div class="userIconDetailsDiv2"><a href="">Sign Up</a></div>
+            </div>
+        </div>
+        
+    </header>
+    <div class="spacer"></div>
+    <body id="faqBody" onscroll="moveColor()">
+        <!--FAQ Hero Section-->
+        <div class="faqHero">
+            <div class="faqHeroTxt">
+                <h2>FREQUENTLY ASKED QUESTIONS</h2>
+                <span>Try the AI text generator, a tool for content creation. It leverages a transformer-based Large Language Model (LLM) to produce text that follows the users instructions. As an AI generator, it offers a range of functions, from text generation, to completing sentences, and predicting contextually relevant content. It can serve as a sentence generator, word generator, and message generator, transforming input into coherent text.</span>
+            </div>
+            <div class="faqHeroImg">
+                <img src="../Media/movieReel.png" alt="movieReel">
+            </div>
+        </div>
+        <div class="spacer"></div>
+        <!--FAQ Drop Down Section-->
+        <div class="faqDropDown">
+            <h2>Signing Up</h2>
+            <div class="firstDd" onclick="expandAns(this)">
+                <div  class="ddQuestion">
+                    <div class="ddQuestionDiv1"><span>How is Signing Up Helping Me?</span></div>
+                    <div class="ddQuestionDiv2">+</div>
+                    <div class="ddQuestionDiv3">-</div>
+                </div>
+                <hr>
+                <div class="ddAnswer">
+                    <span>Unlimited access to your favourite movies and tv shows</span>
+                </div>
+            </div>
+            <div class="secDd" onclick="expandAns(this)">
+                <div class="ddQuestion">
+                    <div class="ddQuestionDiv1"><span>How Do I Sign Up?</span></div>
+                    <div class="ddQuestionDiv2">+</div>
+                    <div class="ddQuestionDiv3">-</div>
+                </div>
+                <hr>
+                <div class="ddAnswer">
+                    <span>Head Over To Our Sign Up Page by The Main Menu :)</span>
+                </div>
+            </div>
+        </div>
+        <div class="spacer"></div>
+        <!--FAQ Tiles-->
+        <div class="faqTiles">
+            <div class="moreFaqHeading"><h2>More FAQ</h2></div>
+            <div class="faqTilesDiv1">
+                <div class="faqTiles-socialsContainer"  onclick="showFaq(this)">
+                    <div class="faqTiles-socials">
+                        <div class="faqTiles-socialsCont">
+                            <h3>How do we connect on social media?</h3>
+                            <hr>
+                            <div class="faqTilesAns">
+                                <span>You can catch us on Facebook, Instagram and Twitter(X). <br></span>
+                                <br>
+                                <span><a href="www.facebook.com">Facebook</a> <br> <a href="www.instagram.com">Instagram</a> <br> <a href="www.twitter.com">Twitter(X)</a></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="faqTiles-officeContainer" onclick="showFaq(this)">
+                    <div class="faqTiles-office">
+                        <div class="faqTiles-officeCont">
+                            <h3>Where is Movies.com office located?</h3>
+                            <hr>
+                            <div class="faqTilesAns">
+                                <span>Our office is located at 18 Van Der Marwe drive, building 22.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="faqTilesDiv2">
+                <div class="faqTiles-aboutContainer" onclick="showFaq(this)">
+                    <div class="faqTiles-about">
+                        <div class="faqTiles-aboutCont">
+                            <h3>What is Movies.com about?</h3>
+                            <hr>
+                            <div class="faqTilesAns">
+                                <span>We proudly hold a libary of the latetst movies and tv-shows you can watch today.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="faqTiles-historyContainer">
+                    <div class="faqTiles-history" onclick="showFaq(this)">
+                        <div class="faqTiles-historyCont">
+                            <h3>What is the history behind Movies.com?</h3>
+                            <hr>
+                            <div class="faqTilesAns">
+                                <span>Our company was founded by sir Jake Melbourne in 1987 a fter a research that he conducted for his academic regarding media consumption.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+
+        <div class="spacer"></div>
+        <!--Fun Facts-->
+        <div class="exploreMore">
+            <div class="exploreMoreHeading"><h2>Movie Fun Facts</h2></div>
+                <div class="exploreMoreTiles">
+                    <div class="exploreMoreTile1">
+                        <div class="exploreMoreTile-Cont">
+                            <div class="exploreMoreTile-Cont1">
+                                <h2>The Matrix</h2>
+                                <span>The code in The Matrix comes from sushi recipes. Those green symbols trailing down in The Matrix aren’t complicated algorithms. A production designer scanned symbols from his wife’s sushi cookbooks, then manipulated them to create the iconic “code.”</span>
+                            </div>
+                            <div class="exploreMoreTile-Cont2">
+                                <a href="https://www.readersdigest.com.au/true-stories-lifestyle/entertainment/22-surprising-movie-trivia-facts-you-wont-believe-are-true"><button>></button></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="exploreMoreTile2">
+                        <div class="exploreMoreTile-Cont">
+                            <div class="exploreMoreTile-Cont1">
+                                <h2>Titanic</h2>
+                                <span>Director James Cameron drew the sketch in Titanic. Unlike Jack’s French girls, Kate Winslet wore a bathing suit while Cameron sketched the picture.</span>
+                            </div>
+                            <div class="exploreMoreTile-Cont2">
+                                <a href="https://www.readersdigest.com.au/true-stories-lifestyle/entertainment/22-surprising-movie-trivia-facts-you-wont-believe-are-true"><button>></button></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="exploreMoreTile3">
+                        <div class="exploreMoreTile-Cont">
+                            <div class="exploreMoreTile-Cont1">
+                                <h2>Halloween</h2>
+                                <span>Michael Myers’ mask in Halloween is William Shatner’s face. Or specifically, his Star Trek character, Captain Kirk. There wasn’t money in the 1978 horror film’s budget to create a custom mask, so the art director bought a clown and a Captain Kirk mask. The crew spray-painted it white, and adjusted the eyes and hair to create the terrifying mask.</span>
+                            </div>
+                            <div class="exploreMoreTile-Cont2">
+                                <a href="https://www.readersdigest.com.au/true-stories-lifestyle/entertainment/22-surprising-movie-trivia-facts-you-wont-believe-are-true"><button>></button></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--<div>
+                    <button onclick="moveColor()"></button>
+                </div>-->
+        </div>
+        <div class="spacer"></div>
+        <!--Image and text component-->
+        <div class="imageAndTextComp">
+            <div class="imageAndTextComp-text">
+                <h2>Together we are making an impact</h2>
+                <div class="spanCont"><span>We're helping to keep the great outdoors great this year by hosting trail cleanups in partnership with the National Wildlife Federation. We're proud to encourage outdoor enthusiasts to help keep nature wild and litter-free.</span><br>
+                    <a href=""><button>Learn More</button></a></div>
+            </div>
+            <div class="imageAndTextComp-img">
+                <!--<img src="../Media/4-together-were-making-an-impact-bg-desktop.jpg.jpg" alt="mobile-img">-->
+            </div>
+        </div>
+        <div class="spacer"></div>
+        <!--Scroll progress bar-->
+        <div class="scrollProgressBar" id="pgrBar"></div>
+
+        <!--JS FOR Drop Down Accordion-->
+        <script>
+            function expandAns(x) {
+                x.classList.toggle("changeState");
+            }
+        </script>
+
+        <!--JS Script for Hamburger style menu-->
+        <script>
+            function humburgerMenu(y) {
+                y.classList.toggle("colapseMenu");
+            }
+        </script>
+
+        <!--A JS script for the profile icon-->
+        <script>
+            function displayProfile (x) {
+                x.classList.toggle("colapseProfile");
+            }
+        </script>
+
+        <!--A JS SCRIPT FOR MORE FAQ ON MOBILE-->
+        <script>
+            function showFaq (x) {
+                x.classList.toggle("showFaqDetails");
+            }
+        </script>
+
+        <!--A JS SCRIPT FOR SCROLL PROGRESS BAR-->
+        <script>
+
+           // window.onscroll = function() {moveColor()};
+
+            var viewportHeight = window.innerHeight;
+
+            //var scrollHeight = viewportHeight * (viewportHeight / document.body.offsetHeight);
+
+
+            function moveColor () {
+               
+
+              //Scroll progress bar
+
+              //First we get the scroller value
+              var windowScroll = document.body.scrollTop;
+              //We now find the height difference between the entire page and the viewport
+              var height = document.documentElement.scrollHeight - viewportHeight;
+              //Scroll percentage
+              var scrolledPercentage = (windowScroll / height) * 100;
+              //console.log('Scrolled Percentage: ' + scrolledPercentage + '%');
+
+              //set the width of the progress bar to the scrolled percentage
+              document.getElementById("pgrBar").style.width = scrolledPercentage + "%";
+              
+            }
+
+        </script>
+
+    </body>
+    <!--Footer-->
+    <div class="spacer"></div>
+    <footer class="second-footer">
+        <div class="secondFooter-content">
+            <div class="secFooterBrand">
+                <h1>Movies</h1>
+            </div>
+            <div class="secFooterCopyRight">
+                <span>Movies © 2013 - 2024</span>
+            </div>
+            <div class="secFooterSocials">
+                <div><a href="https://www.facebook.com/"><img src="../Media/facebook_icon.svg" alt="fbIcon"></a></div>
+                <div><a href="https://www.instagram.com/"><img src="../Media/instagram_icon.svg" alt="instaIcon"></a></div>
+                <div><a href="https://za.pinterest.com/"><img src="../Media/pinterest_icon.svg" alt="pinterest_icon"></a></div>
+                <div><a href="https://za.pinterest.com/"><img src="../Media/twitter_icon.svg" alt="twitter_icon"></a></div>
+                <div><a href="https://www.youtube.com/"><img src="../Media/youtube_icon.svg" alt="youtube_icon"></a></div>
+                <div><a href="https://www.linkedin.com/"><img src="../Media/linkedin_icon.svg" alt="linkedin_icon"></a></div>
+            </div>
+        </div>
+    </footer>
+</html>

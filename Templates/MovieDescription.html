@@ -1,0 +1,210 @@
+<html>
+    <meta name="viewport" content="width=device-width, user-scalable=no" />
+    <head>
+        <title>Latest Movies/Tv Shows</title>
+        <link rel="stylesheet" href="../Styles/style.css" />
+        <link rel="icon" type="image/x-icon" href="../Media/movie-logo.png">
+    </head>
+    <header class="header">
+        <div class="header-comp" onclick="humburgerMenu(this)">
+            <div class="humburgerStyleMenu" >
+                <div class="firstDivBar"></div>
+                <div class="secDivBar"></div>
+                <div class="thirdDivBar"></div>
+            </div>
+            <div class="spacer"></div>
+            <div class="humburgerStyleMenu-cont" >
+                <div class="HomeLink"><a href="../Templates/HomepageTemplate.html">Home</a></div>
+                <div class="moviesLink"><a href="../Templates/Latest-Movies.html">Movies</a></div>
+                <div class="aboutUsLink"><a href="../Templates/AboutUsTemplate.html">About Us</a></div>
+                <div class="profileLink"><a href="../Templates/ProfileTemplate.html">Profile</a></div>
+                <div class="faqLink"><a href="../Templates/FAQ.html">FAQ</a></div>
+                <div class="newsroom"><a href="../Templates/Newsroom.html">Newsroom</a></div>
+            </div>
+        </div>
+        <div class="header-text">
+            <h1 id="header">Movies</h1>
+        </div>
+        <div class="loginLogout">
+            <div class="userIcon"><img src="../Media/personIcon.png" alt="userIcon"></div>
+            <div class="userIconDetails">
+                <div class="userIconDetailsDiv1"><a href="">Sign In</a></div>
+                <div class="userIconDetailsDiv2"><a href="">Sign Up</a></div>
+            </div>
+        </div>
+        
+    </header>
+    <div class="spacer"></div>
+    <body class="hpgBody" onscroll="moveColor()">
+        <!--Movie Details Section-->
+        <div class="videoContainer">
+            <video poster="../Media/marvels2.jpg" controls>
+                <source src="../Media/Marvel Studios' The Marvels _ Official Trailer.mp4" type="video/mp4">
+            </video>
+        </div>
+
+        <div class="movieDescription">
+            <div class="movie-Poster">
+                <img src="../Media/Marvels.jpg" alt="marvels img">
+            </div>
+            <div class="movie-Description">
+                <div class="movie-title">
+                    <h2>The Marvels</h2>
+                </div>
+                <div class="movie-playtime">
+                    <div class="movie-Runtime">
+                        <span>105 Min</span>
+                    </div>
+                    <div class="movie-Studio">
+                        <span>Marvel Studios</span>
+                    </div>
+                </div>
+                <div class="movie-Synopsis">
+                    <span>Carol Danvers, aka Captain Marvel, has reclaimed her identity from the tyrannical Kree and taken revenge on the Supreme Intelligence. However, unintended consequences see her shouldering the burden of a destabilized universe. When her duties send her to an anomalous wormhole linked to a Kree revolutionary, her powers become entangled with two other superheroes to form the Marvels.</span>
+                </div>
+                <div class="movie-Cast">
+                    <span>Cast: Brie Larson, Iman Vellani, Teyonah Paris</span>
+                </div>
+            </div>
+            <div class="you-may-also-like">
+                <div class="youMightAlsoLike-Heading">
+                    <h4>You Might Also Like</h4>
+                </div>
+                <div class="you-may-also-like-content">
+                    <div class="movie-Tiles">
+                        <div class="movie-Tile1">
+                            <div class="movie-Tile1-Description">
+                                <div class="movie-Tile1-img">
+                                    <img src="../Media/spider.jpg" alt="spiderman">
+                                </div>
+                                <div class="movie-Tile1-lbl">
+                                    <label>Spider-man: Across The Spider-Verse</label>
+                                </div>
+                                <div class="movie-Tile1-tbl">
+                                    <span>2023 | 135m | Movie</span>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        <div class="movie-Tile2">
+                            <div class="movie-Tile2-Description">
+                                <div class="movie-Tile1-img">
+                                    <img src="../Media/rick.jpg" alt="rick&morty">
+                                </div>
+                                <div class="movie-Tile1-lbl">
+                                    <label>Rick and Morty</label>
+                                </div>
+                                <div class="movie-Tile1-tbl">
+                                    <span>2023 | eps 20 | Tv Show </span>
+                                </div>
+                             
+                            </div>
+                        </div>
+                        <div class="movie-Tile3">
+                            <div class="movie-Tile3-Description">
+                                <div class="movie-Tile1-img">
+                                    <img src="../Media/Kingdom_of_the_Planet_of_the_Apes_poster.jpg" alt="Kingdom_of_the_Planet_of_the_Apes_poster">
+                                </div>
+                                <div class="movie-Tile1-lbl">
+                                    <label>Kingdom of the Planet of the Apes</label>
+                                </div>
+                                <div class="movie-Tile1-tbl">
+                                    <span>2024 | 145m | Movie</span>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <?php
+        echo "My first PHP script!";
+        console.log("Hey")
+        ?> 
+         <!--A PHP CODE TO CONNECT TO MYSQL DATABASE
+         <?php 
+         //declare variables
+         $servername = "Localhost";
+         $username = "username";
+         $password = "password";
+ 
+ 
+         //create a connection to the database
+         $connection = new mysqli($servername,$username, $password)
+ 
+         //console.log connection status
+         if($connection->connect_error) {
+             die("connection failed: ".$connection->connect_error)
+         }else {
+             console.log("connection is succesful")
+         }
+ 
+         
+ 
+         ?>-->
+
+        
+        
+    </body>
+    <div class="spacer"></div>
+    <footer class="second-footer">
+        <div class="secondFooter-content">
+            <div class="secFooterBrand">
+                <h1>Movies</h1>
+            </div>
+            <div class="secFooterCopyRight">
+                <span>Movies © 2013 - 2024</span>
+            </div>
+            <div class="secFooterSocials">
+                <div><a href="https://www.facebook.com/"><img src="../Media/facebook_icon.svg" alt="fbIcon"></a></div>
+                <div><a href="https://www.instagram.com/"><img src="../Media/instagram_icon.svg" alt="instaIcon"></a></div>
+                <div><a href="https://za.pinterest.com/"><img src="../Media/pinterest_icon.svg" alt="pinterest_icon"></a></div>
+                <div><a href="https://za.pinterest.com/"><img src="../Media/twitter_icon.svg" alt="twitter_icon"></a></div>
+                <div><a href="https://www.youtube.com/"><img src="../Media/youtube_icon.svg" alt="youtube_icon"></a></div>
+                <div><a href="https://www.linkedin.com/"><img src="../Media/linkedin_icon.svg" alt="linkedin_icon"></a></div>
+            </div>
+        </div>
+        <!--Scroll progress bar-->
+        <div class="scrollProgressBar" id="pgrBar"></div>
+        <!--JS Script for Hamburger style menu-->
+        <script>
+            function humburgerMenu(y) {
+                y.classList.toggle("colapseMenu");
+            }
+        </script>
+        
+
+        <!--A JS SCRIPT FOR SCROLL PROGRESS BAR-->
+        <script>
+
+            // window.onscroll = function() {moveColor()};
+ 
+             var viewportHeight = window.innerHeight;
+ 
+             //var scrollHeight = viewportHeight * (viewportHeight / document.body.offsetHeight);
+ 
+ 
+             function moveColor () {
+                
+ 
+               //Scroll progress bar
+ 
+               //First we get the scroller value
+               var windowScroll = document.body.scrollTop;
+               //We now find the height difference between the entire page and the viewport
+               var height = document.documentElement.scrollHeight - viewportHeight;
+               //Scroll percentage
+               var scrolledPercentage = (windowScroll / height) * 100;
+               //console.log('Scrolled Percentage: ' + scrolledPercentage + '%');
+               document.getElementById("pgrBar").style.width = scrolledPercentage + "%";
+               
+             }
+ 
+        </script>
+        
+       
+    
+    </footer>
+</html>

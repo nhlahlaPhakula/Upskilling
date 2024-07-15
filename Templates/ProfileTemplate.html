@@ -1,0 +1,207 @@
+<html>
+    <meta name="viewport" content="width=device-width, user-scalable=no" />
+    <head>
+        <title>Profile Template</title>
+        <link rel="stylesheet" href="../Styles/style.css">
+        <link rel="icon" type="image/x-icon" href="../Media/movie-logo.png">
+    </head>
+    <header class="header">
+        <div class="header-comp" onclick="humburgerMenu(this)">
+            <div class="humburgerStyleMenu" >
+                <div class="firstDivBar"></div>
+                <div class="secDivBar"></div>
+                <div class="thirdDivBar"></div>
+            </div>
+            <div class="spacer"></div>
+            <div class="humburgerStyleMenu-cont" >
+                <div class="HomeLink"><a href="../Templates/HomepageTemplate.html">Home</a></div>
+                <div class="moviesLink"><a href="../Templates/Latest-Movies.html">Movies</a></div>
+                <div class="aboutUsLink"><a href="../Templates/AboutUsTemplate.html">About Us</a></div>
+                <div class="profileLink"><a href="../Templates/ProfileTemplate.html">Profile</a></div>
+                <div class="faqLink"><a href="../Templates/FAQ.html">FAQ</a></div>
+                <div class="newsroom"><a href="../Templates/Newsroom.html">Newsroom</a></div>
+            </div>
+        </div>
+        <div class="header-text">
+            <h1 id="header">Movies</h1>
+        </div>
+        <div class="loginLogout">
+            <div class="userIcon"><img src="../Media/personIcon.png" alt="userIcon"></div>
+            <div class="userIconDetails">
+                <div class="userIconDetailsDiv1"><a href="">Sign In</a></div>
+                <div class="userIconDetailsDiv2"><a href="">Sign Up</a></div>
+            </div>
+        </div>
+        
+    </header>
+    <div class="spacer"></div>
+    <body onscroll="moveColor()">
+        <!--user Profile div-->
+        <div class="profileDiv">
+            <div class="usrProfCol1">
+                <div class="mainImage">
+                    <img src="../Media/model.jpg" alt="modelImg">
+                </div>
+                <div class="secImage">
+                    <img src="../Media/modelImg.jpg" alt="modelImg">
+                </div>
+            </div>
+            <div class="usrProfCol2">
+                <img src="../Media/modelImage.jpg" alt="sideImg">
+                <div class="usrProfCol2Cont">
+                    <label>By Lauren Moren</label>
+                    <h2>Handmade Fashion Brand</h2>
+                    <span>Drawn to the arts since the early age, I have chosen to pursue fashion because it is the only thing that makes me feel alive.</span>
+                    <div class="profileBtns">
+                        <button>Get in touch</button>
+                        <button>Explore More</button>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        <div class="spacer"></div>
+        <!--Related Articles Section-->
+        <div>
+            <h2>Related Articles</h2>
+        </div>
+        <div class="relatedArticles">
+            <div class="relatedArticlesTile1">
+                <div class="imgDiv">
+                    <div class="imgTile">
+                        <img src="../Media/techImg.jpg" alt="tileImg">
+                    </div>
+                    <div class="artTabDiv">
+                        <span>AI</span>
+                    </div>
+                </div>
+                <div class="artDetailsDiv">
+                    <div class="artHeadingDiv">
+                        <h3>The 12 best Synthesia alternatives</h3>
+                    </div>
+                    <div class="artReadAndDateDiv">
+                        <div class="artReadDiv"><span>13min Read</span></div>
+                        <div class="artDateDiv"><span>29 May 2024</span></div> 
+                    </div>
+                </div>
+            </div>
+            <div class="relatedArticlesTile2">
+                <div class="imgDiv">
+                    <div class="imgTile">
+                        <img src="../Media/techImg2.jpg" alt="tileImg2">
+                    </div>
+                    <div class="artTabDiv">
+                        <span>Marketing</span>
+                    </div>
+                </div>
+                <div class="artDetailsDiv">
+                    <div class="artHeadingDiv">
+                        <h3>The 7 best music visualizers in 2024</h3>
+                    </div>
+                    <div class="artReadAndDateDiv">
+                        <div><span>11min Read</span></div>
+                        <div><span>28 May 2024</span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="relatedArticlesTile3">
+                <div class="imgDiv">
+                    <div class="imgTile">
+                        <img src="../Media/techImg3.jpg" alt="tileImg">
+                    </div>
+                    <div class="artTabDiv">
+                        <span>Design</span>
+                    </div>
+                </div>
+                <div class="artDetailsDiv">
+                    <div class="artHeadingDiv">
+                        <h3>The 6 best Placeit alternatives</h3>
+                    </div>
+                    <div class="artReadAndDateDiv">
+                        <div><span>12min Read</span></div>
+                        <div><span>24 May 2021</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="spacer"></div>
+        <!--Join our newsletter section-->
+        <div class="joinUs">
+            <div class="joinUsFirstImg">
+                <img src="../Media/emailICN.png" alt="mailimg">
+            </div>
+            <div class="joinUsContentDiv">
+                <h3>Join Movies Newsletter</h3>
+                <span class="joinPara">Be among the first ones to recieve our latest news and offers</span>
+
+                <div class="inputFieldsSec">
+                    <input class="nameField"  type="text" placeholder="Enter Your Name">
+                    <input class="emailField" src="../Media/emailIcon.png" type="text" placeholder="Enter Your Email">
+                    <button class="joinBtn">Join</button>
+                </div>
+                <span class="joinLstTxt">You Can Easily Unsubscribe At Any Time</span>
+            </div>
+            <div class="joinUsSecImg">
+                <img src="../Media/mailart.png" alt="mailart">
+            </div>
+        </div>
+        <!--Scroll progress bar-->
+        <div class="scrollProgressBar" id="pgrBar"></div>
+
+        <!--JS Script for Hamburger style menu-->
+        <script>
+            function humburgerMenu(y) {
+                y.classList.toggle("colapseMenu");
+            }
+        </script>
+
+        <!--A JS SCRIPT FOR SCROLL PROGRESS BAR-->
+        <script>
+
+            // window.onscroll = function() {moveColor()};
+ 
+             var viewportHeight = window.innerHeight;
+ 
+             //var scrollHeight = viewportHeight * (viewportHeight / document.body.offsetHeight);
+ 
+ 
+             function moveColor () {
+                
+ 
+               //Scroll progress bar
+ 
+               //First we get the scroller value
+               var windowScroll = document.body.scrollTop;
+               //We now find the height difference between the entire page and the viewport
+               var height = document.documentElement.scrollHeight - viewportHeight;
+               //Scroll percentage
+               var scrolledPercentage = (windowScroll / height) * 100;
+               //console.log('Scrolled Percentage: ' + scrolledPercentage + '%');
+               document.getElementById("pgrBar").style.width = scrolledPercentage + "%";
+               
+             }
+ 
+         </script>
+        
+    </body>
+    <!--Footer-->
+    <div class="spacer"></div>
+    <footer class="second-footer">
+        <div class="secondFooter-content">
+            <div class="secFooterBrand">
+                <h1>Movies</h1>
+            </div>
+            <div class="secFooterCopyRight">
+                <span>Movies © 2013 - 2024</span>
+            </div>
+            <div class="secFooterSocials">
+                <div><a href="https://www.facebook.com/"><img src="../Media/facebook_icon.svg" alt="fbIcon"></a></div>
+                <div><a href="https://www.instagram.com/"><img src="../Media/instagram_icon.svg" alt="instaIcon"></a></div>
+                <div><a href="https://za.pinterest.com/"><img src="../Media/pinterest_icon.svg" alt="pinterest_icon"></a></div>
+                <div><a href="https://za.pinterest.com/"><img src="../Media/twitter_icon.svg" alt="twitter_icon"></a></div>
+                <div><a href="https://www.youtube.com/"><img src="../Media/youtube_icon.svg" alt="youtube_icon"></a></div>
+                <div><a href="https://www.linkedin.com/"><img src="../Media/linkedin_icon.svg" alt="linkedin_icon"></a></div>
+            </div>
+        </div>
+    </footer>
+</html>

@@ -1,0 +1,106 @@
+<html>
+    <head>
+        <title>Test</title>
+        <link rel="stylesheet" href="../Styles/style.css" />
+    </head>
+
+        <body style="background-color:white;">
+        
+        <h2>Hoverable Dropdown</h2>
+        <p>Move the mouse over the button to open the dropdown menu.</p>
+        
+        <div class="dropdown">
+          <button class="dropbtn">Dropdown</button>
+          <div class="dropdown-content">
+            <a href="#">Link 1</a>
+            <a href="#">Link 2</a>
+            <a href="#">Link 3</a>
+          </div>
+        </div>
+
+        <div class="test">
+            <button class="testbtn">Test</button>
+            <div class="contents">
+                <a href="">Hey</a>
+            </div>
+        </div>
+
+        <!--Humurger style menu-->
+        <!--First load the icon-->
+
+        <div class="Humurger-menu" onclick="changeState(this)">
+          <div class="first"><p></p></div>
+          <div class="second"></div>
+          <div  class="third"></div>
+        </div>
+        <!--Display content-->
+        <div class="dropdown-contents">
+          <h3>Content</h3>
+          <a href="#">Movies</a>
+          <a href="#">TV Shows</a>
+          <a href="#">Support</a>
+          <a href="#">About Us</a>
+        </div>
+        
+
+        <script>
+          function  changeState(x) {
+            x.classList.toggle("change");
+          }
+        </script>
+
+        <!--Accordions-->
+        <div class="accordions">
+          <div class="first-accordion">
+            <div class="question">
+              <div  class="first-question-div">
+                <h3>Question?</h3>
+              </div>
+              <div  class="second-question-div" onclick="accordionFunction(this)">
+                <h3 class="snd-qst">&#x002B;</h3>
+              </div>
+            </div>
+            <div class="answer">
+              <p>Answer :)</p>
+              <p>This is a test paragraph.</p>
+            </div>
+            
+          </div>
+          <div class="second-accordion"></div>
+          <div class="third-accordion"></div>
+        </div>
+
+        <script>
+          function accordionFunction(x) {
+            x.classList.toggle("update");
+          }
+        </script>
+
+<div class="spacer"></div>
+
+        <!--Menu-->
+        <div class="menuComponent" onclick="expandMenu(this)">
+          <div class="hum-style-menu">
+            <div class="menu-div1"></div>
+            <div class="menu-div2"></div>
+            <div class="menu-div3"></div>
+          </div>
+          <div class="hum-menu-links">
+            <div><a href="#">Movies</a></div>
+            <div><a href="#">TV Shows</a></div>
+            <div><a href="#">Support</a></div>
+          </div>
+        </div>
+        <div class="test-div">
+          <h2>Heading to the West</h2>
+          <p>This is a basic paragraph used for testing.</p>
+        </div>
+
+        <script>
+          function expandMenu(x) {
+            x.classList.toggle("changeState");
+          }
+        </script>
+
+        </body>
+</html>
