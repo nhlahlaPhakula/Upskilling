@@ -1,106 +1,50 @@
+
 <html>
+    <meta name="viewport" content="width=device-width, user-scalable=no" />
     <head>
-        <title>Test</title>
-        <link rel="stylesheet" href="../Styles/style.css" />
+        <title>Test Template</title>
+        <link rel="stylesheet" href="../Styles/style.css">
     </head>
-
-        <body style="background-color:white;">
-        
-        <h2>Hoverable Dropdown</h2>
-        <p>Move the mouse over the button to open the dropdown menu.</p>
-        
-        <div class="dropdown">
-          <button class="dropbtn">Dropdown</button>
-          <div class="dropdown-content">
-            <a href="#">Link 1</a>
-            <a href="#">Link 2</a>
-            <a href="#">Link 3</a>
-          </div>
-        </div>
-
-        <div class="test">
-            <button class="testbtn">Test</button>
-            <div class="contents">
-                <a href="">Hey</a>
+    <header class="header">
+        <div class="header-comp" onclick="humburgerMenu(this)">
+            <div class="humburgerStyleMenu" >
+                <div class="firstDivBar"></div>
+                <div class="secDivBar"></div>
+                <div class="thirdDivBar"></div>
+            </div>
+            <div class="spacer"></div>
+            <div class="humburgerStyleMenu-cont" >
+                <div class="HomeLink"><a href="../Templates/HomepageTemplate.html">Home</a></div>
+                <div class="moviesLink"><a href="../Templates/Latest-Movies.html">Movies</a></div>
+                <div class="aboutUsLink"><a href="../Templates/AboutUsTemplate.html">About Us</a></div>
+                <div class="profileLink"><a href="../Templates/ProfileTemplate.html">Profile</a></div>
+                <div class="faqLink"><a href="../Templates/FAQ.html">FAQ</a></div>
             </div>
         </div>
-
-        <!--Humurger style menu-->
-        <!--First load the icon-->
-
-        <div class="Humurger-menu" onclick="changeState(this)">
-          <div class="first"><p></p></div>
-          <div class="second"></div>
-          <div  class="third"></div>
+        <div class="header-text">
+            <h1 id="header">Movies</h1>
         </div>
-        <!--Display content-->
-        <div class="dropdown-contents">
-          <h3>Content</h3>
-          <a href="#">Movies</a>
-          <a href="#">TV Shows</a>
-          <a href="#">Support</a>
-          <a href="#">About Us</a>
+        <div class="loginLogout">
+            <div class="userIcon"><img src="../Media/personIcon.png" alt="userIcon"></div>
+            <div class="userIconDetails">
+                <div class="userIconDetailsDiv1"><a href="">Sign In</a></div>
+                <div class="userIconDetailsDiv2"><a href="">Sign Up</a></div>
+            </div>
         </div>
         
+    </header>
+    <div class="spacer"></div>
+    <body>
+        <div class="databaseContent">
+            <h2 >Database Content: </h2>
 
-        <script>
-          function  changeState(x) {
-            x.classList.toggle("change");
-          }
-        </script>
-
-        <!--Accordions-->
-        <div class="accordions">
-          <div class="first-accordion">
-            <div class="question">
-              <div  class="first-question-div">
-                <h3>Question?</h3>
-              </div>
-              <div  class="second-question-div" onclick="accordionFunction(this)">
-                <h3 class="snd-qst">&#x002B;</h3>
-              </div>
-            </div>
-            <div class="answer">
-              <p>Answer :)</p>
-              <p>This is a test paragraph.</p>
-            </div>
             
-          </div>
-          <div class="second-accordion"></div>
-          <div class="third-accordion"></div>
         </div>
+        
 
-        <script>
-          function accordionFunction(x) {
-            x.classList.toggle("update");
-          }
-        </script>
-
-<div class="spacer"></div>
-
-        <!--Menu-->
-        <div class="menuComponent" onclick="expandMenu(this)">
-          <div class="hum-style-menu">
-            <div class="menu-div1"></div>
-            <div class="menu-div2"></div>
-            <div class="menu-div3"></div>
-          </div>
-          <div class="hum-menu-links">
-            <div><a href="#">Movies</a></div>
-            <div><a href="#">TV Shows</a></div>
-            <div><a href="#">Support</a></div>
-          </div>
-        </div>
-        <div class="test-div">
-          <h2>Heading to the West</h2>
-          <p>This is a basic paragraph used for testing.</p>
-        </div>
-
-        <script>
-          function expandMenu(x) {
-            x.classList.toggle("changeState");
-          }
-        </script>
-
-        </body>
+        
+    </body>
 </html>
+
+
+
