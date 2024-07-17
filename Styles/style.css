@@ -3285,8 +3285,8 @@
     .latest-img {
         height: 400px;
         width: 300px;
-        margin-left: 50px;
-        z-index: -1;
+        margin-left: 20px;
+        
     }
     
     
@@ -3487,7 +3487,21 @@
     margin-left: 5px;
    }
 
+    /*Database content styling*/
+   .database-content {
+    width: 100%;
+    height: auto;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background-color: #04AA6D;
     
+   }
+
+   .databaseImage {
+    width: 100px;
+    height: 100px;
+   }
+
 
 
 }

@@ -41,7 +41,9 @@
         <div class="movies-container">
             <div class="latest-row">
                 <div class="latest-movie">
-                    <img class="latest-img" src="../Media/Marvels.jpg"  />
+                    <a href="../Pages/MovieDescription.html">
+                        <img class="latest-img" src="../Media/Marvels.jpg"  />
+                    </a>
                     <br/>
                     <table class="latest-table">
                         <tr>
@@ -53,7 +55,7 @@
                     </table>
                 </div>
                 <div class="latest-movie" id="latest-movie">
-                    <img class="latest-img" src="../Media/Barbie.jpg"/>
+                    <a href=""><img class="latest-img" src="../Media/Barbie.jpg"/></a>
                     <br/>
                     <table class="latest-table">
                         <tr>
@@ -65,7 +67,7 @@
                     </table>
                 </div>
                 <div class="latest-movie">
-                    <img class="latest-img" src="../Media/Saltburn.jpg"/>
+                    <a href=""><img class="latest-img" src="../Media/Saltburn.jpg"/></a>
                     <br/>
                     <table class="latest-table">
                         <tr>
@@ -79,8 +81,8 @@
             </div>
             <div class="spacer"></div>
             <div class="latest-row">
-                <div class="latest-movie">
-                    <img class="latest-img" src="../Media/Loki.jpg"/>
+                <div class="latest-movie" onclick="openNewPage()">
+                    <a href=""><img class="latest-img" src="../Media/Loki.jpg"/></a>
                     <br/>
                     <table class="latest-table">
                         <tr>
@@ -92,7 +94,7 @@
                     </table>
                 </div>
                 <div class="latest-movie" id="latest-movie">
-                    <img class="latest-img" src="../Media/Last of us.jpg"/>
+                    <a href=""><img class="latest-img" src="../Media/Last of us.jpg"/></a>
                     <br/>
                     <table class="latest-table">
                         <tr>
@@ -104,7 +106,7 @@
                     </table>
                 </div>
                 <div class="latest-movie">
-                    <img class="latest-img" src="../Media/Gen-v.jpg"/>
+                    <a href=""><img class="latest-img" src="../Media/Gen-v.jpg"/></a>
                     <br/>
                     <table class="latest-table">
                         <tr>
@@ -120,7 +122,7 @@
             <div class="moreTvMovies" id="moreTvMovies">
                 <h6>More Movies & Tv Shows</h6>
                 <div class="latest-movie" id="latest-movie">
-                    <img class="latest-img" src="../Media/Last of us.jpg"/>
+                    <a href=""><img class="latest-img" src="../Media/Last of us.jpg"/></a>
                     <br/>
                     <table class="latest-table">
                         <tr>
@@ -183,6 +185,16 @@
             function btnDisappear() {
                 document.getElementById("moreBtn").style.display = "none";
                 document.getElementById("moreTvMovies").style.display = "block";
+            }
+        </script>
+
+
+        <!--A JS SCRIPT TO REDIRECT/OPEN DESCRIPTION PAGE-->
+        <script>
+
+            function openNewPage() {
+                redirect.
+                    window.location.href = '../Pages/MovieDescription.html';
             }
         </script>
          
