@@ -3487,19 +3487,47 @@
     margin-left: 5px;
    }
 
-    /*Database content styling*/
+    
+
+   /*Database content styling*/
    .database-content {
-    width: 100%;
+    width: 33.3333%;
     height: auto;
     padding-top: 30px;
     padding-bottom: 30px;
     background-color: #04AA6D;
-    
+    display: flex;
+   }
+
+   .database-content:hover {
+    background-color: #6495ED;
    }
 
    .databaseImage {
-    width: 100px;
-    height: 100px;
+    width: 50%;
+    height: 150px;
+   }
+
+   .databaseImage img {
+    margin-left: 20px;
+   }
+
+   .databaseContent-descrip {
+    width: 50%;
+   }
+
+   .resultsContainer {
+    display: flex;
+    width: 100%;
+   }
+
+   .resultsContainer .database-content {
+    width: 30%;
+    height: 200px;
+    margin-right: 3%;
+    background-color:#03b7ee;
+    
+    
    }
 
 

@@ -14,12 +14,11 @@
             </div>
             <div class="spacer"></div>
             <div class="humburgerStyleMenu-cont" >
-            <div class="HomeLink"><a href="../Pages/Homepage.html">Home</a></div>
-                <div class="moviesLink"><a href="../Pages/Latest-Movies.html">Movies</a></div>
-                <div class="aboutUsLink"><a href="../Pages/AboutUs.html">About Us</a></div>
-                <div class="profileLink"><a href="../Pages/Profile.html">Profile</a></div>
-                <div class="faqLink"><a href="../Pages/FAQ.html">FAQ</a></div>
-                <div class="newsroom"><a href="../Pages/Newsroom.html">Newsroom</a></div>
+                <div class="HomeLink"><a href="../Templates/HomepageTemplate.html">Home</a></div>
+                <div class="moviesLink"><a href="../Templates/Latest-Movies.html">Movies</a></div>
+                <div class="aboutUsLink"><a href="../Templates/AboutUsTemplate.html">About Us</a></div>
+                <div class="profileLink"><a href="../Templates/ProfileTemplate.html">Profile</a></div>
+                <div class="faqLink"><a href="../Templates/FAQ.html">FAQ</a></div>
             </div>
         </div>
         <div class="header-text">
@@ -54,7 +53,7 @@
                 if($connection->connect_error) {
                     die("Connection failed:" . $connection->connect_error);
                 }else {
-                    echo "Connection successful";
+                   // echo "Connection successful";
                 }
 
 
@@ -94,6 +93,14 @@
             
         </div>
 
+
+    
+        <div class="resultsContainer">
+            <!--<div>Hey</div>
+            <div>Hey</div>
+            <div>Hey</div>-->
+        
+
         <?php 
             $sql = "SELECT * FROM `you_might_also_like`";
 
@@ -101,21 +108,26 @@
             while($row = $results->fetch_assoc())
             {
         ?>
-        <div class="database-content-heading">
-                <h2>You May Also Like</h2>
-        </div>
+
+        
         <div class="database-content">
-            <div class="databaseImage"><?php echo '<img width="100", height="100", src="data:image/png;base64, ' . base64_encode($row['Poster']) . '" >'; ?></div>
-            <div><?php echo $row['Title']; ?></div>
-            <div><?php echo $row['Year']; ?></div>
-            <div><?php echo $row['Runtime']; ?></div>
-            <div><?php echo $row['Label']; ?></div>
+            <div class="databaseImage"><?php echo '<img width="100", height="150", src="data:image/png;base64, ' . base64_encode($row['Poster']) . '" >'; ?></div>
+            <div class="databaseContent-descrip">
+                <div><?php echo $row['Title']; ?></div>
+                <div><?php echo $row['Year']; ?></div>
+                <div><?php echo $row['Runtime']; ?></div>
+                <div><?php echo $row['Label']; ?></div>
+            </div>
         </div>
+
+        
         
 
         <?php
             }
         ?>
+
+        </div>
 
         <!--<div class="database-content-container">
                             <div class="database-content-heading">
@@ -146,8 +158,11 @@
                         </div>-->
         
 
+
+        
         
     </body>
+    
 </html>
 
 
