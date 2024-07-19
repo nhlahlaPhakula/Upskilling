@@ -3542,6 +3542,10 @@
     margin: 1%;
    }
 
+   .database-contents:hover {
+    background-color: #04AA6D;
+   }
+
    .database-content-library {
     width: 100%;
    
