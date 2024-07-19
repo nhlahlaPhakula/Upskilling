@@ -3495,12 +3495,13 @@
     height: auto;
     padding-top: 30px;
     padding-bottom: 30px;
-    background-color: #04AA6D;
+    background-color:#03b7ee;
     display: flex;
+    
    }
 
    .database-content:hover {
-    background-color: #6495ED;
+    background-color: #04AA6D;
    }
 
    .databaseImage {
@@ -3529,6 +3530,37 @@
     
     
    }
+
+   /*Styling database movies & tv shows library*/
+   .database-contents {
+    width: 30%;
+    height: auto;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background-color:#03b7ee;
+    display: flex;
+    margin: 1%;
+   }
+
+   .database-content-library {
+    width: 100%;
+   
+    height: auto;
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+   }
+
+   .database-library-content {
+    width: 100%;
+    height: auto;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+   }
+    
 
 
 

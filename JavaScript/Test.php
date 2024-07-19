@@ -102,7 +102,7 @@
         
 
         <?php 
-            $sql = "SELECT * FROM `you_might_also_like`";
+            $sql = "SELECT * FROM `you_might_also_like` LIMIT 3";
 
             $results = $connection->query($sql);
             while($row = $results->fetch_assoc())
@@ -156,6 +156,40 @@
                                 
                             </div>
                         </div>-->
+
+
+
+        <!--Right Now we are displaying the whole movie/tv library-->
+        <div class="database-content-library">
+            <div class="database-content-heading"><h2>Movies & Tv Shows</h2></div>
+            <div class="database-library-content">
+                <?php
+                    //declare sql statement 
+                    $sql = "SELECT * FROM `you_might_also_like`";
+
+                    $results = $connection->query($sql);
+                    //a while loop to display our results as long as there is something to show
+                    while($row = $results->fetch_assoc()) 
+                    {
+                ?>
+                        <div class="database-contents">
+                            <div class="databaseImage">
+                                <?php echo'<img width="100" height="150" src="data:image/png;base64, ' . base64_encode($row['Poster']) . '">' ?>
+                            </div>
+                            <div class="databaseContent-descrip">
+                                <div><?php echo $row['Title'];?></div>
+                                <div><?php echo $row['Year'];?></div>
+                                <div><?php echo $row['Runtime'];?></div>
+                                <div><?php echo $row['Label'];?></div>
+                            </div>
+                        </div>
+
+                <?php
+                    }
+                ?>
+            </div>
+            
+        </div>
         
 
 
