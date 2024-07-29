@@ -1,9 +1,10 @@
-
 <html>
     <meta name="viewport" content="width=device-width, user-scalable=no" />
     <head>
-        <title>Test Page</title>
+        <title>JavaScript Html Page</title>
         <link rel="stylesheet" href="../Styles/style.css">
+        <link rel="icon" type="image/x-icon" href="../Media/movie-logo.png">
+        <script type="text/JavaScript"  src="../JavaScript/Javascript.js"></script>
     </head>
     <header class="header">
         <div class="header-comp" onclick="humburgerMenu(this)">
@@ -19,6 +20,7 @@
                 <div class="aboutUsLink"><a href="../Pages/AboutUs.html">About Us</a></div>
                 <div class="profileLink"><a href="../Pages/Profile.html">Profile</a></div>
                 <div class="faqLink"><a href="../Pages/FAQ.html">FAQ</a></div>
+                <div class="newsroom"><a href="../Pages/Newsroom.html">Newsroom</a></div>
             </div>
         </div>
         <div class="header-text">
@@ -34,38 +36,13 @@
         
     </header>
     <div class="spacer"></div>
-    <body>
-        <h2>Increments</h2>
-        <div class="testPageStyling">
-            <div class="testPageStyling-cont"><button id="previous">Previous</button></div>
-            <div class="testPageStyling-cont"><button id="next" value="0" onclick="increment()" >Next</button></div>
+    <!--Scroll progress bar-->
+    <div class="scrollProgressBar" id="pgrBar"></div>
+    
+    <body onload="showMessage()" onscroll="moveColor()">
+        <div>This is a test page</div>
+        <div id="demo">
+            
         </div>
-
-        <div class="testPageStyling-asnwer">
-            <textarea id="textArea" >Answer: </textarea>
-        </div>
-
-        <!--A JS SCRIPT TO SHOW OUR INCREMENTS AND DECREMENT-->
-        <script>
-
-            var counter = 0;
-            //var next = 1;
-            //increment function
-            function increment() {
-              document.getElementById("next").value = ++counter; 
-             // document.getElementById("textarea").style.display = "Answer: " + next;
-             console.log(counter++);
-             document.getElementById("textArea").style.display = ++counter; 
-            }
-
-        </script>
-
-        
     </body>
 </html>
-
-
-
-
-24
-" xh/*--piy411
