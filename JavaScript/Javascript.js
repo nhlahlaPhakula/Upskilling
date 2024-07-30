@@ -85,4 +85,58 @@ function moveColor () {
         document.getElementById("overlayContainer").style.display = "none";
     }
 
+
+//HERO SLIDER FUNCTION
+ 
+       //counter, onClick it increments 
+       let counter = -1;
+
+       //first we need to find all the classes with "homepageSlide"
+       function findMatching() {
+        let slideArray =  document.getElementsByClassName("homepageSlide");
+
+        //we need a counter variable. counter and array indexing will work together
+        counter++;
+        
+        //now we check the array for content with classes "homepageSlide"
+        if(slideArray.length > 0) {
+
+           //give the results found a new variable
+           let slideValue = slideArray[counter].innerHTML;
+
+           //display slidevalue based on onclick increment and array indexing
+           document.getElementById('homepageSlider-container').innerHTML = slideValue;
+        }else {
+           console.log("No Match!");
+           //document.getElementById("three-col-comp").innerHTML = "There is no match";
+        }
+
+       }
+
+       //A js function to show slides on decrement
+       function showPrevious() {
+           
+           //decrement variable
+           counter--;
+
+           //find content under "slide" class that matches the decrement
+           let slideArray = document.getElementsByClassName("homepageSlide");
+
+           //display others as long as previous button is clicked
+           if (slideArray.length > 0) {
+               
+               //set a new variable for your results
+               let slideValue = slideArray[counter].innerHTML;
+
+               //display slidevalue based onclick decrement
+               document.getElementById('homepageSlider-container').innerHTML = slideValue;
+           }else {
+               console.log("No Match!");
+               //document.getElementById("three-col-comp").innerHTML = "There is no match";
+           }
+
+       }
+       
+
+
  

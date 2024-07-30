@@ -34,38 +34,214 @@
         
     </header>
     <div class="spacer"></div>
-    <body>
+    <body onload="findMatching()" >
         <h2>Increments</h2>
         <div class="testPageStyling">
-            <div class="testPageStyling-cont"><button id="previous">Previous</button></div>
-            <div class="testPageStyling-cont"><button id="next" value="0" onclick="increment()" >Next</button></div>
+            <div class="testPageStyling-cont"><button id="previous" onclick="calcClass()">Previous</button></div>
+            <div class="testPageStyling-cont"><button id="next" onclick="findMatching()" >Next</button></div>
         </div>
 
         <div class="testPageStyling-asnwer">
-            <textarea id="textArea" >Answer: </textarea>
+            <textarea id="textArea" ></textarea>
         </div>
 
-        <!--A JS SCRIPT TO SHOW OUR INCREMENTS AND DECREMENT-->
-        <script>
+        <div class="test-js-slide">
+            <div class="slide" >Slide 1
 
+                <div class="slide-images"><img src="../Media/2010s.jpg" alt=""></div>
+                <div><h3>This is a simple text</h3></div>
+            </div>
+            <div class="slide" >Slide 2
+                <div class="slide-images"><img src="../Media/1980s.jpg" alt=""></div>
+                <div><h3>This is a simple text</h3></div>
+            </div>
+            <div class="slide" >Slide 3
+                <div class="slide-images"><img src="../Media/2010s.jpg" alt=""></div>
+                <div><h3>This is a simple text</h3></div>
+            </div>
+            <div class="slide" >Slide 4
+                <div class="slide-images"><img src="../Media/2000s.jpg" alt=""></div>
+                <div><h3>This is a simple text</h3></div>
+            </div>
+        </div>
+
+
+        <div class="">
+            <h3>Results</h3>
+            <div id="arrayResults"></div>
+        </div>
+
+        <!--A JS SCRIPT TO INCREMENT
+        <script>
             var counter = 0;
-            //var next = 1;
-            //increment function
-            function increment() {
-              document.getElementById("next").value = ++counter; 
-             // document.getElementById("textarea").style.display = "Answer: " + next;
-             console.log(counter++);
-             document.getElementById("textArea").style.display = ++counter; 
+            function calcClass() {
+                //increment onClick
+                counter++;
+                document.getElementById('textArea').value = counter;
+                console.log("Increment: " + counter);
+            }
+        </script>-->
+
+        <!--A JS SCRIPT TO DECREMENT
+        <script>
+            var counter = 0;
+            function calcClass() {
+                //increment onClick
+                --counter;
+                document.getElementById('textArea').value = counter;
+                console.log("Increment: " + counter);
+            }
+        </script>-->
+
+        <!--A JS SCRIPT TO FIND ALL THE "slide" classes
+        <script>
+            var counter = 0;
+            function findClass() {
+                //find the array and it's length
+                var arrayList = document.getElementsByClassName("slide");
+                console.log(arrayList);
+                var result = arrayList.length;
+
+                console.log("Results: " + arrayList + " <br>" + "Results Length: " + result );
+
+                //increment onClick
+                counter++;
+                document.getElementById("textArea").value = counter;
+                console.log("Resultss: " + counter);
+                
+                //introduce indexing
+                
+
+                //for(let counter = 0; counter <= result; counter++) {
+                    //var slider = arrayList[counter];
+                    //console.log("Slider:" + slider);
+                //}
+
+                //automatically display item on index 0
+                //document.getElementById(arrayList[counter]).style.display = "block"; 
+
+                //Show slide equals to the counter and also
+                var slider = arrayList[counter];
+
+                if(slider = arrayList[counter]) {
+                    //console.log("Match");
+                    //document.getElementBySId("slide").style.display = "block";
+                    console.log(slider);
+                    //document.getElementById("arrayResults").innerHTML = slider;
+                    document.getElementById("arrayResults").appendChild(slider);
+                    //document.getElementById("slide").style.display = "block";
+
+                    //document.getElementById("arrayResults").outerHTML = slider;
+
+                }else {
+                    console.log("Out of range");
+                }
             }
 
-        </script>
+            
+        </script>-->
 
+       <!---A JS SLIDER FUNCTION-->
+
+       <script>
+
+        //First find all the classes that uses the "slide" class
+        let counter = -1;
+
+        //disable previous button 
+        //var previousBtn = document.getElementById("previous");
+            //previousBtn.disabled = true;
+            //previousBtn.setAttribute('disabled', true);
+
+        function findMatching() {
+          //let arrayList = document.getElementsByClassName("slide");
+            //document.getElementsByClassName("test-js-slide").innerHTML = arrayList;
+            // console.log(arrayList);
+            //let arrayLength = arrayList.length;
+           // console.log("This array length is:" + arrayLength);
+            //document.getElementById("arrayResults").innerHTML = arrayList;
+            
+            //Find content under slide class
+            let slideArray  = document.getElementsByClassName('slide');
+           
+
+            //A JS SCRIPT TO INCREMENT
+                //increment onClick
+                counter++;
+                document.getElementById('textArea').value = counter;
+                console.log("Increment: " + counter);
+                
+                
+
+            //A JS SCRIPT TO DECREMENT
+            
+
+            //check if there is any slide class other that the one already found
+            if(slideArray.length > 0) {
+
+                //access the value  of the first element in the collection
+                let slideValue = slideArray[counter].innerHTML;
+
+                
+                
+                //display our findings
+                document.getElementById('arrayResults').innerHTML = slideValue;
+
+                
+            }else {
+                console.log("No matches!");
+            };
+
+            
+        
+
+        }
+
+        //A JS SCRIPT TO DECREMENT
+            function calcClass() {
+                //Decrement onClick
+                --counter;
+                document.getElementById('textArea').value = counter;
+                console.log("Decrement: " + counter);
+
+                //find content under "slide" class
+                let slideArray = document.getElementsByClassName("slide");
+
+                //check for other contents under the slides class
+                if(slideArray.length > 0) {
+
+                    //access the slider based on increment 
+                    let slideValue = slideArray[counter].innerHTML;
+
+                    //disable previous button when the indexing is at 0
+
+
+                    //display our results
+                    document.getElementById('arrayResults').innerHTML = slideValue;
+                }else {
+                    console.log("No Matches!");
+                }
+
+                /*disable button when the button 
+                if(slideValue > 1 ) {
+                    var previousBtn = document.getElementById("previous");
+                    //previousBtn.disabled = true;
+                    previousBtn.setAttribute('disabled', false);
+                }else {
+                    var previousBtn = document.getElementById("previous");
+                    //previousBtn.disabled = true;
+                    previousBtn.setAttribute('disabled', true);
+                }*/
+            
+
+            }
+
+       </script>
+
+       <!--A JS SCRIPT FOR PREVIOUS-->
+    
+
+       
         
     </body>
 </html>
-
-
-
-
-24
-" xh/*--piy411

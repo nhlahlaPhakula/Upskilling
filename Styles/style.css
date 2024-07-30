@@ -1682,41 +1682,66 @@
         background-color: #D0D0D0	;
     }
     
-    .homepageSlide1, .homepageSlide2, .homepageSlide3, .homepageSldImg {
-        width: 1000px;
+    .homepageSlide, .homepageSldImg {
+        width: 70%;
         height: 500px;
+        margin-left: 15%;
     }
+
+    .homepageSlider {
+        position: relative;
+    }
+
 
     .homepageSliderContainer {
         position: relative;
         height: 500px;
     }
 
-    .homepageSlide1,.homepageSlide2, .homepageSlide3 {
-        margin-left: 15%;
-        position: absolute;
-    }
-
-    .homepageSlide1 h1, .homepageSlide2 h1, .homepageSlide3 h1 {
+    .homepageSlider h1 {
         position: absolute;
         color: white;
-        top: 50px;
-        left: 100px;
+        left: 20%;
+        top: 10%;
+    }
+
+    .homepageSlider p {
+        position: absolute;
+        color: white;
+        left: 15%;
+        top: 35%;
+    }
+
+    .sliderBtn {
+        position: absolute;
+        top: 80%;
+        left: 20%;
+        width: 120px;
+        height: 50px;
+        border-color: orangered;
+        border-radius: 20px;
+        color: orangered;
+    }
+
+    .sliderBtn:hover {
+        position: absolute;
+        top: 80%;
+        left: 20%;
+        width: 120px;
+        height: 50px;
+        border-color: white;
         background-color: orangered;
-    }
-
-    .homepageSlide1 p, .homepageSlide2 p, .homepageSlide3 p {
-        position: absolute;
+        border-radius: 20px;
         color: white;
-        top: 200px;
-        background-color: #04AA6D;
     }
 
-     .homepageSlide2, .homepageSlide3 {
+   
+
+    /* .homepageSlide, .homepageSlide {
         display: none;
-    }
+    }*/
 
-    .homepageSlide1 button, .homepageSlide2 button, .homepageSlide3 button {
+    .homepageSlide button {
         position: absolute;
         top: 400px;
         left: 90px;
@@ -1778,9 +1803,9 @@
         background-color: #485d56;
     }
 
-    .viewSlide .homepageSlide2 {
+    /*.viewSlide .homepageSlide2 {
         display: block;
-    }
+    }*/
 
 
 
@@ -3587,7 +3612,25 @@
    .testPageStyling-cont button {
     margin-top: 100px;
    }
-    
+
+   /*JAVASCRIPT TEST PAGE*/
+   .test-js-slide {
+    width: 100%;
+    height: auto;
+   }
+
+    .test-js-slide div {
+        display: none;
+        width: 50%;
+    }
+
+    .slide-images img {
+        width: 100px;
+        height: 100px;
+
+    }
+
+   
 
 
 
@@ -4716,6 +4759,12 @@
     .movie-Tile1-tbl span {
         color: #00004B;
     }
+
+    /*JAVASCRIPT TEST PAGE*/
+    .test-js-slide div {
+        display: none;
+    }
+
 
     
 
