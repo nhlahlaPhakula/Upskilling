@@ -37,7 +37,7 @@
     <body onload="findMatching(); disablePrev()" >
         <h2>Increments</h2>
         <div class="testPageStyling">
-            <div class="testPageStyling-cont"><button id="previous" onclick="enableButton(); calcClass()">Previous</button></div>
+            <div class="testPageStyling-cont"><button id="previous" onclick="enableButton(); calcClass(); disabelOnDecrement()">Previous</button></div>
             <div class="testPageStyling-cont"><button id="next" onclick="disableButton(); findMatching(); enablePrev()" >Next</button></div>
         </div>
 
@@ -271,6 +271,23 @@
                 };
 
 
+            }
+
+            //a function to disable button on decrements decrementals
+
+            function disabelOnDecrement() {
+                
+
+                let slideArray = document.getElementsByClassName("slide");
+
+                let arrayLength = slideArray.length;
+                
+                //let arraySize = slideArray.length;
+                if(count == 0) {
+                    //access the slider based on increment 
+                    //let slideValue = slideArray[count].innerHTML;
+                    document.getElementById("previous").disabled = true;
+                };
             }
 
 

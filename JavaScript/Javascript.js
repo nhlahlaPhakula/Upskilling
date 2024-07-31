@@ -175,6 +175,24 @@ function enableButton() {
 }
 
 
+//a function to disable button on decrements decrementals
+
+function disabelOnDecrement() {
+                
+
+    let slideArray = document.getElementsByClassName("homepageSlide");
+
+    let arrayLength = slideArray.length;
+    
+    //let arraySize = slideArray.length;
+    if(count == 0) {
+        //access the slider based on increment 
+        //let slideValue = slideArray[count].innerHTML;
+        document.getElementById("previous").disabled = true;
+    };
+}
+
+
 //a function t disable the previous button
 function disablePrev() {
     //count--;
