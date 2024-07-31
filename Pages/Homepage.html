@@ -36,7 +36,7 @@
         
     </header>
     <div class="spacer"></div>
-    <body class="hpgBody" onload="findMatching()" onscroll="moveColor()">
+    <body class="hpgBody" onload="findMatching(); disablePrev()" onscroll="moveColor()">
         <!--Slider for desktop-->
         <div class="homepageSliderContainer" hidden >
             <div class="homepageSlide" id="slide">
@@ -69,9 +69,9 @@
         <div class="homepageSlider">
             <div id="homepageSlider-container"></div>
             <div class="bannerPagination" id="slide" >
-                <div class="slidePrvBtn"><button onclick="showPrevious()" ></button></div>
+                <div class="slidePrvBtn"><button id="previous" onclick="showPrevious(); enableButton()" ></button></div>
                 <div><button></button></div>
-                <div class="slideNextBtn"><button id="slide-nextBtn" onclick="findMatching()" ></button></div>
+                <div class="slideNextBtn"><button id="nextBtn" onclick="findMatching(); disableButton(); enablePrev()" ></button></div>
             </div>
         </div>
         <div class="spacer"></div>

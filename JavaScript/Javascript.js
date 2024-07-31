@@ -136,6 +136,65 @@ function moveColor () {
            }
 
        }
+
+
+//A JS SCRIPT TO DIABLE THE NEXT BUTTON
+let count = 0;
+//var button = document.getElementById("next");
+function disableButton() {
+    count++;
+
+    //find all the staff with "slide" class
+    let slideArray = document.getElementsByClassName("homepageSlide");
+
+    let arraySize = slideArray.length;
+    //console.log("Array Size: " + arraySize);
+    if(count == arraySize - 1) {
+        document.getElementById("nextBtn").disabled = true;
+        console.log("Count:" + count);
+    }else {
+        //document.getElementById("next").disabled = false;
+    };
+
+    
+}
+
+//a function to enable the next button 
+
+function enableButton() {
+    count--;
+    //find all the results under "slide" class
+    let slideArray = document.getElementsByClassName("homepageSlide");
+
+    let arraySize = slideArray.length;
+    if(count < arraySize) {
+        document.getElementById("nextBtn").disabled = false;
+    };
+
+
+}
+
+
+//a function t disable the previous button
+function disablePrev() {
+    //count--;
+    //find all the results under "slide" class
+
+    if(count == 0) {
+        document.getElementById("previous").disabled = true;
+    }
+}
+
+
+//a function to enable the previous button
+function enablePrev() {
+    if(count > 0) {
+        document.getElementById("previous").disabled = false;
+    }
+}
+
+
+
        
 
 
