@@ -1703,6 +1703,7 @@
         color: white;
         left: 20%;
         top: 10%;
+        background-color: grey;
     }
 
     .homepageSlider p {
@@ -1710,6 +1711,7 @@
         color: white;
         left: 15%;
         top: 35%;
+        background-color: grey;
     }
 
     .sliderBtn {

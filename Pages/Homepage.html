@@ -60,6 +60,13 @@
                 <p>This is a paragraph</p>
                 <button class="sliderBtn">Click Here</button>
             </div>
+            <div class="homepageSlide" id="slide">
+                <img class="homepageSldImg" src="../Media/Deadpool-Wolverine.jpg" alt="image3">
+                <img class="homepageSldMobImg" src="../Media/deadpoolandwolverine-mob.jpg" alt="mobImage3">
+                <h1>Deadpool & Wolverine</h1>
+                <p>Everyone deserves a happy ending</p>
+                <button class="sliderBtn">Click Here</button>
+            </div>
             <div class="bannerPagination" id="slide" >
                 <div class="slidePrvBtn"><button  ></button></div>
                 <div><button></button></div>
@@ -69,7 +76,7 @@
         <div class="homepageSlider">
             <div id="homepageSlider-container"></div>
             <div class="bannerPagination" id="slide" >
-                <div class="slidePrvBtn"><button id="previous" onclick="showPrevious(); enableButton(); disabelOnDecrement()" ></button></div>
+                <div class="slidePrvBtn"><button id="previous" onclick="showPrevious(); enableButton(); disablePrev()" ></button></div>
                 <div><button></button></div>
                 <div class="slideNextBtn"><button id="nextBtn" onclick="findMatching(); disableButton(); enablePrev()" ></button></div>
             </div>
