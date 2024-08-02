@@ -35,17 +35,17 @@
     </header>
     <div class="spacer"></div>
     <body onload="findMatching(); disablePrev()" >
-        <h2>Increments</h2>
-        <div class="testPageStyling">
-            <div class="testPageStyling-cont"><button id="previous" onclick="enableButton(); calcClass(); disabelOnDecrement()">Previous</button></div>
-            <div class="testPageStyling-cont"><button id="next" onclick="disableButton(); findMatching(); enablePrev()" >Next</button></div>
+        <h2 hidden>Increments</h2>
+        <div class="testPageStyling" >
+            <div class="testPageStyling-cont"><button id="previous" onclick="enableButton(); calcClass(); disabelOnDecrement()" >Previous</button></div>
+            <div class="testPageStyling-cont"><button id="next" onclick="disableButton(); findMatching(); enablePrev()"  >Next</button></div>
         </div>
 
-        <div class="testPageStyling-asnwer">
+        <div class="testPageStyling-asnwer" >
             <textarea id="textArea" ></textarea>
         </div>
 
-        <div class="test-js-slide">
+        <div class="test-js-slide" >
             <div class="slide" >Slide 1
 
                 <div class="slide-images"><img src="../Media/2010s.jpg" alt=""></div>
@@ -66,9 +66,26 @@
         </div>
 
 
-        <div class="">
+        <div class="resultsSection" >
             <h3>Results</h3>
             <div id="arrayResults"></div>
+        </div>
+
+        <!--Overlay popup-->
+        <div class="heyDiv">
+            <h3>Hey</h3>
+            <img src="../Media/action (1).jpg" class="overlayImage" alt="action-movie" onclick="overlayPopup()">
+        </div>
+         
+        
+
+        <div class="overlayContainer" id="overlayContainer">
+            <div class="overlayContent">
+                <div onclick="overlayPopupClose()"><a href="">One</a></div>
+                <div><a href="">Two</a></div>
+                <div><a href="">Three</a></div>
+                <div><a href="">Four</a></div>
+            </div>
         </div>
 
         <!--A JS SCRIPT TO INCREMENT
@@ -318,7 +335,16 @@
        <!--A JS SCRIPT FOR PREVIOUS-->
     
 
-       
+       <!--A JS SCRIPT for showing popup-->
+       <script>
+        function overlayPopup() {
+            document.getElementById("overlayContainer").style.display = "block";
+        }
+
+        function overlayPopupClose() {
+            document.getElementById("overlayContainer").style.display = "none";
+        }
+       </script>
         
     </body>
 </html>
