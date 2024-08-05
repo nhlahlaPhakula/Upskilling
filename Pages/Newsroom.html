@@ -35,11 +35,8 @@
         </div>
         
     </header>
-    <div class="spacer"></div>
-
-    <body class="newsroom" onscroll="moveColor()">
-
-        <div class="spacer"></div>
+    
+    <body class="newsroom" onscroll="moveColor()" onload="overlayOff()">
 
         <div class="latestNewsFirstDiv">
             <div class="latestNewsFirstDiv-heading"><h2>Latest News</h2></div>
@@ -163,13 +160,13 @@
                             </div>
         
                         <div class="popupDropdown" onclick="articleAccordion(this)">
-                            <div class="popupDropdownHeading">
+                            <div class="popupDropdownHeading" onclick="openArcodion()">
                                 <div class="popupContact"><h4>Press Contacts</h4></div>
                                 <div class="popupDropIcon"><img src="../Media/dropdown.png" alt="dropdown-arrow"></div>
                                 <div class="popupDropIcon2"><img src="../Media/UpArrow.png" alt="UpArrow"></div>
                             </div>
                             <div class="popupDropdownDivider"><hr></div>
-                            <div class="popupDropdownDetails">
+                            <div class="popupDropdownDetails" >
                                 <div class="contactPerson1">
                                     <h3>D'Nara Cush</h3>
                                     <label>Apple</label>
@@ -270,6 +267,7 @@
                 document.getElementById("overlayContainer").style.display = "none";
             }
         </script>-->
+        
         
     </body>
     <!--Footer-->
