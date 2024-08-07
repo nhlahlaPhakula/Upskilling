@@ -3087,6 +3087,7 @@
     .popUpContainer {
         width: 100%;
         height: 250%;
+        overflow: auto;
         background-color: rgba(255, 255, 255, 1.0);
         position: absolute;
         top: 0%;
@@ -3094,6 +3095,8 @@
         z-index: 20;
         display: none;
     }
+
+    
 
     .popupContent{
         height: auto;
@@ -3105,7 +3108,7 @@
         box-shadow: 5px 10px 5px 10px #888888;
         display: none;
         position: absolute;
-        top: 0%;
+        top: 2%;
         
         left: 20%;
     }
