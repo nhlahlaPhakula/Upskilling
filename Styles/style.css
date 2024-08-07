@@ -3112,13 +3112,14 @@
 
     .popupImage {
         height: 250px;
+        width: 100%;
         
     }
 
     .popupImage img {
-        width: 150px;
-        height: 150px;
-        margin-left: 25%;
+        width: 20%;
+        height: 170px;
+        margin-left: 40%;
         margin-top: 60px;
         border-radius: 30px;
     }
@@ -5046,12 +5047,15 @@
     }
 
     /*Newsroom article popup*/
+    
+
     .popUp {
         width: 100%;
         height: auto;
-        /*position: absolute;
-        top: 0%;*/
+        position: absolute;
+        top: 0%;
         background-color:#6495ED;
+        margin-bottom: 100%;
     }
 
     .popupImage {
