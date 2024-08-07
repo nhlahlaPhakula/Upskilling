@@ -79,10 +79,12 @@ function moveColor () {
 //Overlay functions for our popup-->
     function overlayOn() {
         document.getElementById("overlayContainer").style.display = "block";
+        document.getElementById("popUpContainer").style.display = "block";
     }
 
     function overlayOff() {
         document.getElementById("overlayContainer").style.display = "none";
+        document.getElementById("popUpContainer").style.display = "none";
     }
 
 

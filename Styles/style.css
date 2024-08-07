@@ -3084,13 +3084,30 @@
     }
 
     /*Popup styling section*/
-    .popupContent {
+    .popUpContainer {
+        width: 100%;
+        height: 200%;
+        background-color: rgba(255, 255, 255, 0.8);
+        position: absolute;
+        top: 0%;
+        left: 0;
+        z-index: 20;
+        display: none;
+    }
+
+    .popupContent{
         height: auto;
+        width: 60%;
+        z-index: 10;
         background-color: white;
         border-radius: 15px;
         padding-bottom: 20px;
         box-shadow: 5px 10px 5px 10px #888888;
         display: none;
+        position: absolute;
+        top: 0%;
+        
+        left: 20%;
     }
 
     .popupImage {
@@ -4882,10 +4899,13 @@
     }
 
     /*Newsroom styling section*/
+    
+
     .latestNewsFirstDiv {
         width: 100%;
         height: 600px;
         /*background-color: #04AA6D;*/
+
     }
 
     .latestNewsFirstDiv-cont {
@@ -5029,7 +5049,8 @@
     .popUp {
         width: 100%;
         height: auto;
-        
+        /*position: absolute;
+        top: 0%;*/
         background-color:#6495ED;
     }
 
