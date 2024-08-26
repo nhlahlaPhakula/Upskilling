@@ -1,0 +1,485 @@
+
+<html>
+    <meta name="viewport" content="width=device-width, user-scalable=no" />
+    <head>
+        <title>Test Page</title>
+        <link rel="stylesheet" href="../Styles/style.css">
+    </head>
+    <header class="header">
+        <div class="header-comp" onclick="humburgerMenu(this)">
+            <div class="humburgerStyleMenu" >
+                <div class="firstDivBar"></div>
+                <div class="secDivBar"></div>
+                <div class="thirdDivBar"></div>
+            </div>
+            <div class="spacer"></div>
+            <div class="humburgerStyleMenu-cont" >
+                <div class="HomeLink"><a href="../Pages/Homepage.html">Home</a></div>
+                <div class="moviesLink"><a href="../Pages/Latest-Movies.html">Movies</a></div>
+                <div class="aboutUsLink"><a href="../Pages/AboutUs.html">About Us</a></div>
+                <div class="profileLink"><a href="../Pages/Profile.html">Profile</a></div>
+                <div class="faqLink"><a href="../Pages/FAQ.html">FAQ</a></div>
+            </div>
+        </div>
+        <div class="header-text">
+            <h1 id="header">Movies</h1>
+        </div>
+        <div class="loginLogout">
+            <div class="userIcon"><img src="../Media/personIcon.png" alt="userIcon"></div>
+            <div class="userIconDetails">
+                <div class="userIconDetailsDiv1"><a href="">Sign In</a></div>
+                <div class="userIconDetailsDiv2"><a href="">Sign Up</a></div>
+            </div>
+        </div>
+        
+    </header>
+    <div class="spacer"></div>
+    <body class="testPageBody" onload="findMatching(); disablePrev(); disableFunctions()" >
+        <h2 hidden>Increments</h2>
+        <div class="testPageStyling" >
+            <div class="testPageStyling-cont"><button id="previous" onclick="enableButton(); calcClass(); disabelOnDecrement()" >Previous</button></div>
+            <div class="testPageStyling-cont"><button id="next" onclick="disableButton(); findMatching(); enablePrev()"  >Next</button></div>
+        </div>
+
+        <div class="testPageStyling-asnwer" >
+            <textarea id="textArea" ></textarea>
+        </div>
+
+        <div class="test-js-slide" >
+            <div class="slide" >Slide 1
+
+                <div class="slide-images"><img src="../Media/2010s.jpg" alt=""></div>
+                <div><h3>This is a simple text</h3></div>
+            </div>
+            <div class="slide" >Slide 2
+                <div class="slide-images"><img src="../Media/1980s.jpg" alt=""></div>
+                <div><h3>This is a simple text</h3></div>
+            </div>
+            <div class="slide" >Slide 3
+                <div class="slide-images"><img src="../Media/2010s.jpg" alt=""></div>
+                <div><h3>This is a simple text</h3></div>
+            </div>
+            <div class="slide" >Slide 4
+                <div class="slide-images"><img src="../Media/2000s.jpg" alt=""></div>
+                <div><h3>This is a simple text</h3></div>
+            </div>
+        </div>
+
+
+        <div class="resultsSection" >
+            <h3>Results</h3>
+            <div id="arrayResults"></div>
+        </div>
+
+        <!--Overlay popup-->
+        <div class="heyDiv">
+            <h3>Hey</h3>
+            <img src="../Media/action (1).jpg" class="overlayImage" alt="action-movie" onclick="overlayPopup()">
+        </div>
+         
+        
+
+        <div class="overlayContainer" id="overlayContainer">
+            <div class="overlayContent">
+                <div onclick="overlayPopupClose()"><a href="">One</a></div>
+                <div><a href="">Two</a></div>
+                <div><a href="">Three</a></div>
+                <div><a href="">Four</a></div>
+                <div onclick="overlayPopupClose()"><a href="">One</a></div>
+                <div><a href="">Two</a></div>
+                <div><a href="">Three</a></div>
+                <div><a href="">Four</a></div>
+                <div onclick="overlayPopupClose()"><a href="">One</a></div>
+                <div><a href="">Two</a></div>
+                <div><a href="">Three</a></div>
+                <div><a href="">Four</a></div>
+                <div onclick="overlayPopupClose()"><a href="">One</a></div>
+                <div><a href="">Two</a></div>
+                <div><a href="">Three</a></div>
+                <div><a href="">Four</a></div>
+                <div onclick="overlayPopupClose()"><a href="">One</a></div>
+                <div><a href="">Two</a></div>
+                <div><a href="">Three</a></div>
+                <div><a href="">Four</a></div>
+                <div onclick="overlayPopupClose()"><a href="">One</a></div>
+                <div><a href="">Two</a></div>
+                <div><a href="">Three</a></div>
+                <div><a href="">Four</a></div>
+                <div onclick="overlayPopupClose()"><a href="">One</a></div>
+                <div><a href="">Two</a></div>
+                <div><a href="">Three</a></div>
+                <div><a href="">Four</a></div>
+            </div>
+        </div>
+
+        <!--Expanding image gallery -->
+        <div class="gallery-container">
+            <div class="gallery-heading">
+                <h1>Upcoming 2025 Movies</h1>
+            </div>
+            <div class="expanding-gallery" >
+                <div class="galleryDiv-1" id="div1" onclick="moviesPopup();">
+                    <div class="galleryDiv1" ><img src="../Media/captainamericabravenewworld.jpg" alt="capatain america" ></div>
+                    <div class="movie-label"><h2>Captain America: Brave New World</h2></div>
+                </div>
+                
+                <div class="galleryDiv-2" id="div2" onclick="moviesPopupSec()">
+                    <div class="galleryDiv2" ><img src="../Media/avatar-3-logo.jpg" alt="Avatar fire and ash"></div>
+                    <div class="movie-label"><h2>Avatar: Fire and Ash</h2></div>
+                </div>
+    
+                <div class="galleryDiv-3" id="div3"  onclick="moviesPopupThird()">
+                    <div class="galleryDiv3" ><img src="../Media/mortalkombat.jpg" alt="Mortal Kombat"></div>
+                    <div class="movie-label"><h2>Mortal Kombat 2</h2></div>
+                </div>
+    
+                <div class="galleryDiv-4" id="div4" onclick="moviesPopupFourth()" >
+                    <div class="galleryDiv4" ><img src="../Media/f4.jpg" alt="Fantastic four"></div>
+                    <div class="movie-label"><h2>Fantastic Four: First Steps</h2></div>
+                </div>
+    
+                <div class="galleryDiv-5" id="div5" onclick="moviesPopupFifth()" >
+                    <div class="galleryDiv5"><img src="../Media/michael.jpg" alt="michael"></div>
+                    <div class="movie-label"><h2>Michael: The Man Who Became King</h2></div>
+                </div>
+                
+            </div>
+        </div>
+
+        <div class="movies-popup-container" id="movies-popup-container">
+            <div class="movie-popup-closeBtn" onclick="moviePopupClose()"></div>
+            <div class="first-movie">
+                <div class="popup-movie-poster1"></div>
+                <div class="popup-movie-title">
+                    <h3>Avatar: Fire and Ash</h3>
+                </div>
+                <div class="popup-movie-runtime">
+                    <span>Runtime: 1hr30</span>
+                </div>
+                <div class="popup-movie-cast">
+                    <span>Cast: Zoe Saldana, Sam Worthington, Siguorney Weaver</span>
+                </div>
+                <div class="popup-movie-cast">
+                    <span>Studio: 20th Century Fox</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="movies-popup-container" id="movies-popup-container2">
+            <div class="movie-popup-closeBtn" onclick="moviePopupCloseSec()"></div>
+            <div class="first-movie">
+                <div class="popup-movie-poster2"></div>
+                <div class="popup-movie-title">
+                    <h3>Captain America: Brave New World</h3>
+                </div>
+                <div class="popup-movie-runtime">
+                    <span>Runtime: 1hr30</span>
+                </div>
+                <div class="popup-movie-cast">
+                    <span>Cast: Anthony Mackie, Harrison Ford, Giancarlo Esposito</span>
+                </div>
+                <div class="popup-movie-cast">
+                    <span>Studio: Marvel Studios</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="movies-popup-container" id="movies-popup-container3">
+            <div class="movie-popup-closeBtn" onclick="moviePopupCloseThird()"></div>
+            <div class="first-movie">
+                <div class="popup-movie-poster3"></div>
+                <div class="popup-movie-title">
+                    <h3>Mortal Kombat 2</h3>
+                </div>
+                <div class="popup-movie-runtime">
+                    <span>Runtime: 1hr30</span>
+                </div>
+                <div class="popup-movie-cast">
+                    <span>Cast: Karl Urban, Martyn Ford, Adeline Rudolph</span>
+                </div>
+                <div class="popup-movie-cast">
+                    <span>Studio: Warner Bros. Pictures</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="movies-popup-container" id="movies-popup-container4">
+            <div class="movie-popup-closeBtn" onclick="moviePopupCloseFourth()"></div>
+            <div class="first-movie">
+                <div class="popup-movie-poster4"></div>
+                <div class="popup-movie-title">
+                    <h3>Mortal Kombat 2</h3>
+                </div>
+                <div class="popup-movie-runtime">
+                    <span>Runtime: 1hr30</span>
+                </div>
+                <div class="popup-movie-cast">
+                    <span>Cast: Karl Urban, Martyn Ford, Adeline Rudolph</span>
+                </div>
+                <div class="popup-movie-cast">
+                    <span>Studio: Warner Bros. Pictures</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="movies-popup-container" id="movies-popup-container5">
+            <div class="movie-popup-closeBtn" onclick="moviePopupCloseFifth()"></div>
+            <div class="first-movie">
+                <div class="popup-movie-poster5"></div>
+                <div class="popup-movie-title">
+                    <h3>Mortal Kombat 2</h3>
+                </div>
+                <div class="popup-movie-runtime">
+                    <span>Runtime: 1hr30</span>
+                </div>
+                <div class="popup-movie-cast">
+                    <span>Cast: Karl Urban, Martyn Ford, Adeline Rudolph</span>
+                </div>
+                <div class="popup-movie-cast">
+                    <span>Studio: Warner Bros. Pictures</span>
+                </div>
+            </div>
+        </div>
+
+
+        
+       <!--A JS SCRIPT FOR SHOWING THE POPUP--> 
+        <script>
+            function moviesPopup() {
+                document.getElementById("movies-popup-container").style.display = "block";
+            }
+            
+            function moviePopupClose() {
+                document.getElementById("movies-popup-container").style.display = "none";
+            }
+
+            function moviesPopupSec() {
+                document.getElementById("movies-popup-container2").style.display = "block";
+            }
+            
+            function moviePopupCloseSec() {
+                document.getElementById("movies-popup-container2").style.display = "none";
+            }
+
+            function moviesPopupThird() {
+                document.getElementById("movies-popup-container3").style.display = "block";
+            }
+            
+            function moviePopupCloseThird() {
+                document.getElementById("movies-popup-container3").style.display = "none";
+            }
+
+            function moviesPopupFourth() {
+                document.getElementById("movies-popup-container4").style.display = "block";
+            }
+            
+            function moviePopupCloseFourth() {
+                document.getElementById("movies-popup-container4").style.display = "none";
+            }
+            function moviesPopupFifth() {
+                document.getElementById("movies-popup-container5").style.display = "block";
+            }
+            
+            function moviePopupCloseFifth() {
+                document.getElementById("movies-popup-container5").style.display = "none";
+            }
+        </script>
+
+        <!--A JS FUCTION TO PREVENT A FUNCTION FROM WORKING -->
+        <script>
+            function disableFunctions() {
+                var screenSize = window.innerWidth;
+                if(screenSize > 1000) {
+                    document.getElementById("movies-popup-container").onclick = null;
+                }
+            }
+        </script>
+
+       <script>
+
+        //First find all the classes that uses the "slide" class
+        let counter = -1;
+
+        //disable previous button 
+        //var previousBtn = document.getElementById("previous");
+            //previousBtn.disabled = true;
+            //previousBtn.setAttribute('disabled', true);
+
+        function findMatching() {
+          //let arrayList = document.getElementsByClassName("slide");
+            //document.getElementsByClassName("test-js-slide").innerHTML = arrayList;
+            // console.log(arrayList);
+            //let arrayLength = arrayList.length;
+           // console.log("This array length is:" + arrayLength);
+            //document.getElementById("arrayResults").innerHTML = arrayList;
+            
+            //Find content under slide class
+            let slideArray  = document.getElementsByClassName('slide');
+           
+
+            //A JS SCRIPT TO INCREMENT
+                //increment onClick
+                counter++;
+                document.getElementById('textArea').value = counter;
+                console.log("Increment: " + counter);
+                
+                
+
+            //A JS SCRIPT TO DECREMENT
+            
+
+            //check if there is any slide class other that the one already found
+            if(slideArray.length > 0) {
+
+                //access the value  of the first element in the collection
+                let slideValue = slideArray[counter].innerHTML;
+
+                //if the slideArray.length is greater than 0 keep 
+                
+                //display our findings
+                document.getElementById('arrayResults').innerHTML = slideValue;
+
+                
+            }else {
+                console.log("No matches!");
+            };
+        
+
+        }
+
+
+        //A JS SCRIPT TO DECREMENT
+            function calcClass() {
+                //Decrement onClick
+                --counter;
+                document.getElementById('textArea').value = counter;
+                console.log("Decrement: " + counter);
+
+                //find content under "slide" class
+                let slideArray = document.getElementsByClassName("slide");
+
+                //check for other contents under the slides class
+                if(slideArray.length > 0) {
+
+                    //access the slider based on increment 
+                    let slideValue = slideArray[counter].innerHTML;
+
+                    //disable previous button when the indexing is at 0
+
+
+                    //display our results
+                    document.getElementById('arrayResults').innerHTML = slideValue;
+                }else {
+                    console.log("No Matches!");
+                }
+
+                /*disable button when the button 
+                if(slideValue > 1 ) {
+                    var previousBtn = document.getElementById("previous");
+                    //previousBtn.disabled = true;
+                    previousBtn.setAttribute('disabled', false);
+                }else {
+                    var previousBtn = document.getElementById("previous");
+                    //previousBtn.disabled = true;
+                    previousBtn.setAttribute('disabled', true);
+                }*/
+
+            
+
+            }
+
+
+            //a js script for dis-abling the next button
+            let count = 0;
+            //var button = document.getElementById("next");
+            function disableButton() {
+                count++;
+
+                //find all the staff with "slide" class
+                let slideArray = document.getElementsByClassName("slide");
+
+                let arraySize = slideArray.length;
+                //console.log("Array Size: " + arraySize);
+                if(count == arraySize - 1) {
+                    document.getElementById("next").disabled = true;
+                    console.log("Count:" + count);
+                }else {
+                    //document.getElementById("next").disabled = false;
+                };
+
+                
+            }
+
+            //a function to enable the next button 
+            
+            function enableButton() {
+                count--;
+                //find all the results under "slide" class
+                let slideArray = document.getElementsByClassName("slide");
+
+                let arraySize = slideArray.length;
+                if(count < arraySize) {
+                    document.getElementById("next").disabled = false;
+                };
+
+
+            }
+
+            //a function to disable button on decrements decrementals
+
+            function disabelOnDecrement() {
+                
+
+                let slideArray = document.getElementsByClassName("slide");
+
+                let arrayLength = slideArray.length;
+                
+                //let arraySize = slideArray.length;
+                if(count == 0) {
+                    //access the slider based on increment 
+                    //let slideValue = slideArray[count].innerHTML;
+                    document.getElementById("previous").disabled = true;
+                };
+            }
+
+
+            //a function t disable the previous button
+            function disablePrev() {
+                //count--;
+                //find all the results under "slide" class
+
+                if(count == 0) {
+                    document.getElementById("previous").disabled = true;
+                }
+            }
+
+
+            //a function to enable the previous button
+            function enablePrev() {
+                if(count > 0) {
+                    document.getElementById("previous").disabled = false;
+                }
+            }
+
+
+
+
+            
+       </script>
+
+       <!--A JS SCRIPT FOR PREVIOUS-->
+    
+
+       <!--A JS SCRIPT for showing popup-->
+       <script>
+        function overlayPopup() {
+            document.getElementById("overlayContainer").style.display = "block";
+        }
+
+        function overlayPopupClose() {
+            document.getElementById("overlayContainer").style.display = "none";
+        }
+       </script>
+        
+    </body>
+</html>
