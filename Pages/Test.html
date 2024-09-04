@@ -223,7 +223,7 @@
         </div>
 
         <div class="movies-popup-container" id="movies-popup-container5">
-            <div class="movie-popup-closeBtn" onclick="moviePopupCloseFifth()"></div>
+            <div class="movie-popup-closeBtn" ontouchstart="moviePopupCloseFifth()"></div>
             <div class="first-movie">
                 <div class="popup-movie-poster5"></div>
                 <div class="popup-movie-title">
@@ -240,29 +240,128 @@
                 </div>
             </div>
         </div>
+        <div class="spacer"></div>
+        <!--Draggale window slider-->
+        <div class="draggable-slider">
+            <div class="color-image-div"></div>
+            <div class="dragger" id="dragger"></div>
+            <div class="blackwhite-image-div" id="black-dune"></div>
+        </div>
 
+        <!--A JS SCRIPT FOR DRAGGING AN IMAGE-->
+        <!--<script>
+            var blackDune = document.getElementById("black-dune");
+            var drag = false;
+            var moveDiv = blackDune.getBoundingClientRect().width;
+
+            blackDune.addEventListener("mousemove", draggableImage);
+            
+            function draggableImage(e) {
+                document.getElementById("black-dune").style.width = "100%";
+                
+            }
+
+            
+        </script>-->
+
+        <script>
+            //fetch the element dragger element and assign it a variable 
+            var resize = document.querySelector("#dragger");
+
+            //fetch the element left and assign it a variable
+            var left = document.querySelector(".color-image-div");
+
+            //fetch the container element and assign it a variable 
+            var container = document.querySelector(".draggable-slider");
+
+            //find both the width of the left element above and the width of the resize element above. Add them together. 
+            var moveX = left.getBoundingClientRect().width + resize.getBoundingClientRect().width / 2;
+
+            //initially drag is set to false until dragged
+            var drag = false;
+            
+            //add an event listener on the resize element.(The element should not react on "mousedown")
+            resize.addEventListener("mousedown", function(e) {
+                drag = true;
+                moveX = e.x;
+            });
+
+            //on "mousemove" minus the width of the left element from resize element
+            container.addEventListener("mousemove", function(e) {
+                moveX = e.x;
+                if(drag) {
+                    left.style.width = moveX - resize.getBoundingClientRect().width / 2 + "px";
+                    e.preventDefault();
+                }
+            });
+
+            //on "mouseup" event drag is set to false
+            container.addEventListener("mouseup", function(e) {
+                drag = false;
+            });
+        </script>
+
+        <!--A JS FUCTION TO PREVENT A FUNCTION FROM WORKING -->
+        <script>
+            window.onload = function() {
+                var screenSize = window.outerWidth;
+                //console.log("Current Screen Size:" + screenSize);
+                //alert("Screen Size : " + screenSize);
+
+                if(screenSize > 500) {
+                
+                }
+            }
+            
+        </script>
 
         
        <!--A JS SCRIPT FOR SHOWING THE POPUP--> 
         <script>
+             
+            //var screenSize = window.outerWidth;
+            var viewportWidth =  window.innerWidth;
+            //var mobileMediaQuery = window.matchMedia("(max-width: 400px)");
+    
+            console.log("Current viewport width:" + viewportWidth);
+
             function moviesPopup() {
-                document.getElementById("movies-popup-container").style.display = "block";
+                if(viewportWidth <= 430) {
+                    document.getElementById("movies-popup-container").style.display = "block";
+                }else {
+                    document.getElementById("movies-popup-container").style.display = "none";
+                }
+                
+                
             }
+
             
             function moviePopupClose() {
                 document.getElementById("movies-popup-container").style.display = "none";
             }
 
             function moviesPopupSec() {
-                document.getElementById("movies-popup-container2").style.display = "block";
+                if(viewportWidth <= 430) {
+                    document.getElementById("movies-popup-container2").style.display = "block";
+                }else {
+                    document.getElementById("movies-popup-container2").style.display = "none";
+                }
+                
             }
             
             function moviePopupCloseSec() {
                 document.getElementById("movies-popup-container2").style.display = "none";
             }
 
+
+
             function moviesPopupThird() {
-                document.getElementById("movies-popup-container3").style.display = "block";
+                if(viewportWidth <= 430) {
+                    document.getElementById("movies-popup-container3").style.display = "block";
+                }else {
+                    document.getElementById("movies-popup-container3").style.display = "none";
+                }
+                
             }
             
             function moviePopupCloseThird() {
@@ -270,14 +369,26 @@
             }
 
             function moviesPopupFourth() {
-                document.getElementById("movies-popup-container4").style.display = "block";
+                if(viewportWidth <= 430) {
+                    document.getElementById("movies-popup-container4").style.display = "block";
+                }else {
+                    document.getElementById("movies-popup-container4").style.display = "none";
+                }
+                
             }
             
             function moviePopupCloseFourth() {
                 document.getElementById("movies-popup-container4").style.display = "none";
             }
+
+
             function moviesPopupFifth() {
-                document.getElementById("movies-popup-container5").style.display = "block";
+                if(viewportWidth <= 430) {
+                    document.getElementById("movies-popup-container5").style.display = "block";
+                }else {
+                    document.getElementById("movies-popup-container5").style.display = "none";
+                }
+                
             }
             
             function moviePopupCloseFifth() {
@@ -285,15 +396,7 @@
             }
         </script>
 
-        <!--A JS FUCTION TO PREVENT A FUNCTION FROM WORKING -->
-        <script>
-            function disableFunctions() {
-                var screenSize = window.innerWidth;
-                if(screenSize > 1000) {
-                    document.getElementById("movies-popup-container").onclick = null;
-                }
-            }
-        </script>
+        
 
        <script>
 

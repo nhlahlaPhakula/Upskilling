@@ -3728,6 +3728,11 @@
     }
 
     /*Expanding image gallery styling*/
+    .gallery-container {
+        width: 100%;
+        height: 500px;
+    }
+
    .gallery-heading {
     width: 100%;
     height: 10vh;
@@ -3800,9 +3805,92 @@
     
     
 
+    /*.draggable-slider {
+        width: 100%;
+        height: 400px;
+        background-color:#04AA6D ;
+        position: relative;
+    }
 
+    .color-image-div {
+        width: 100%;
+        height: 400px;
+        background-image: url('../Media/Dune-color.jpg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size:cover;
+        position: relative;
+    }
+
+    .blackwhite-image-div {
+        width: 50%;
+        height: 100%;
+        background-image: url('../Media/Dune-black.jpg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: absolute;
+        top: 0;
+        right: 0;
+        cursor: col-resize;
+        transition: 1s ease-in-out;
+    }*/
     
+    .draggable-slider {
+        display: flex;
+        height: 500px;
+        width: 100%;
+        /*background-color: #03b7ee;*/
+        background-image: url('../Media/Dune-black.jpg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
 
+    .color-image-div, .blackwhite-image-div {
+        padding: 12px;
+        overflow: hidden;
+        display: grid;
+        align-items: center;
+    }
+
+    .color-image-div {
+        /*background-color: #dadada;*/
+        width: 50%;
+        text-align: right;
+        background-image: url('../Media/Dune-color.jpg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size:cover;
+    }
+
+    .dragger {
+        background: #444857;
+        height: 100%;
+        width: 14px;
+        cursor: col-resize;
+        flex-shrink: 0;
+        position: relative;
+        z-index: 10;
+        user-select: none;
+    }
+
+    .dragger::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 3px;
+        height: 15px;
+        border-inline: 1px solid #fff;
+    }
+
+
+    .blackwhite-image-div {
+        flex-grow: 1;
+    }
+    
 
 
     
@@ -5432,6 +5520,55 @@
 
     .popup-movie-runtime, .popup-movie-cast, .popup-movie-cast {
         margin: 10px;
+    }
+
+    /*Draggable slidder*/
+    .draggable-slider {
+        width: 100%;
+        height: 800px;
+        position: absolute;
+        top: 1300px;
+        background-color: #03b7ee;
+        display: block;
+    }
+
+    .blackwhite-image-div {
+        width: 100%;
+        height: 100%;
+        background-image: url('../Media/Dune-chani-black.jpg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .color-image-div {
+        width: 100%;
+        height: 100px;
+        position: absolute;
+        background-image: url('../Media/Dune-chani.jpg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .dragger {
+        width: 100%;
+        height: 14px;
+        position: absolute;
+        top: 93px;
+        background-color: #444857;
+        cursor: col-resize;
+    }
+
+    .dragger::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 3px;
+        height: 15px;
+        border-inline: 1px solid #fff;
     }
     
     
